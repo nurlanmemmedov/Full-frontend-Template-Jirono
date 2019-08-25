@@ -126,9 +126,8 @@ header{
                                 width: 3px;
                             }
                             &:hover{
-                                // color: $color-light-black !important;
                                 background-color: $color-light-gray;
-                                padding-left: 25px;
+                                padding-left: 25px !important;
                             }
                         }
                       

@@ -67,13 +67,11 @@
                         height: 281px;
                         position: relative;
                         .detail{
+                           width: 100%;
+                           height: 100%;
                            position: absolute;
+                           z-index: 2;
                            top: 0;
-                           left: 0;
-                           right: 0;
-                           bottom: 0;
-                           background-color: $main-color;
-                           opacity: $low-opacity;
                            display: flex;
                            align-items: center;
                            justify-content: center;
@@ -85,6 +83,17 @@
                                    font-size: $font-size * 1.125;
                                }
                            }
+                        }
+                        &::before{
+                            position: absolute;
+                            content: "";
+                           top: 0;
+                           left: 0;
+                           right: 0;
+                           bottom: 0;
+                           background-color: $main-color;
+                           opacity: $low-opacity;
+                           z-index: 1;
                         }
                     }
                     .image-small{
@@ -276,20 +285,6 @@
     background-color: $color-white !important;
 }
 #parallax{
-    position: relative;
-    min-height: 315px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    .parallax-item{
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: $main-color;
-        opacity: $low-opacity;
-    
     }
     .container{
         .count{
@@ -316,6 +311,251 @@
             }
             &:hover{
                 transform: translateY(-7px);
+            }
+        }
+    
+}
+#our-team{
+    background-color: $color-white;
+    .container{
+        .head{
+        }
+        .content{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: wrap;
+            .member{
+                .team-item{
+                    position: relative;
+                    box-shadow: $shadow-light;
+                    border-radius: $main-radius;
+                    margin-bottom: 55px;
+                    .team-content{
+                        text-align: center;
+                        .team-info{
+                            color: $color-white;
+                            padding-top: 10px;
+                            padding-bottom: 10px;
+                            &::after{
+                             transition: $transition-later;
+                            position: absolute;
+                            border-top-left-radius: $main-radius;
+                            border-top-right-radius: $main-radius;
+                            content: "";
+                            top: 0;
+                            left: 0;
+                            right: 0; 
+                            height: 68px;
+                            background-color: $main-color;
+                            z-index: 1;
+                            }
+                            h3{
+                                position: relative;
+                                z-index: 2;
+                                font-size: $font-size;
+                                letter-spacing: $letter-spacing*0.69;
+                                margin-top: 5px;
+                                font-weight: 400;
+                                margin: 0;
+                            }
+                            p{
+                                // margin-bottom: 0;
+                                position: relative;
+                                z-index: 2;
+                                font-size: $font-size*0.75;
+                                color: $color-light-p;
+                                letter-spacing: 0.6px;
+                                
+                            }
+                        }
+                        .team-contact{
+                            text-align: center;
+                            margin-top: 8px;
+                            margin-bottom: 13px;
+                            position: relative;
+                            z-index: 2;
+                            a{
+                                margin: 0 7px;
+                                text-decoration: none;
+                                i{
+                                    transition: $transition-later;
+                                }
+                            }
+                        }
+                        .team-description{
+                            padding-bottom: 1px;
+                            p{
+                                margin-bottom: 60px !important;
+                                padding: 0 25px;
+                                font-weight: 400;
+                                font-size: $font-size * 0.875;
+                                color: #6F8BA4;
+                                letter-spacing: $letter-spacing * 0.6;
+                                line-height: $line-height * 1.625;
+                            }
+                        }
+                       
+                    }
+                    .team-image{
+                        transition: $transition-later;
+                        width: 96px;
+                        height: 96px;
+                        margin: auto;
+                        overflow: hidden;
+                        border-radius: 100%;
+                        border: 6px solid white;
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        bottom: -45px;
+                        box-shadow: $shadow-light;
+                        img{
+                            
+                        }
+                    }
+                    &:hover .team-info::after{
+                        height: 125px;
+                    }
+                    &:hover .team-contact a i{
+                        color: $color-white;
+                    }
+                    &:hover .team-image{
+                        bottom: -55px;
+                    }
+                }
+            }
+        }
+    }
+}
+#pricing{
+    background-color: $color-lightest-gray;
+    .container{
+    .head{
+        .head-title{
+
+        }
+    }
+    .content{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        .plan{
+            .pricing-item{
+                overflow: hidden;
+                background-color: $color-white;
+                box-shadow: $shadow-light;
+                text-align: center;
+                border-radius: $main-radius;
+                .pricing-header{
+                    height: 130px;
+                    border-bottom: 1px solid $color-lightest-gray;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    h3{
+                        font-weight: 700;
+                        color: $color-light-black;
+                        font-size: $font-size;
+                    }
+                }
+                .advanced{
+                    background-color: $main-color;
+                    h3{
+                        color: $color-white;
+                    }
+                }
+                .pricing-main{
+                    margin-bottom: 40px;
+                    .number{
+                        position: relative;
+                        width: 42px;
+                        height: 42px;
+                        background-color: $color-lightest-gray;
+                        line-height: $line-height * 2.625;
+                        margin: auto;
+                        border-radius: 100%;
+                        margin-top: -20px;
+                    }
+                    .price-parent{
+                        margin-top: 40px;
+                        margin-bottom: 30px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        .dollar{
+                            font-size: $font-size * 1.125;
+                            position: relative;
+                            top: -15px;
+                        }
+                        h1{
+                            font-weight: 700;
+                            font-size: $font-size * 2.125;
+                            color: $main-color;
+                            letter-spacing: $letter-spacing 2.12;
+                        }
+                        .time{
+                            font-size: $font-size * 0.875;
+                        }
+                        span{
+                            font-weight: 700;
+                            color: $main-color;;
+                            letter-spacing: $letter-spacing * 0.88;
+                        }
+                    }
+                    ul{
+                        padding: 0 !important;
+                        list-style-type: none;
+                        li{
+                            color: $color-light-black;
+                            font-weight: 400;
+                            font-size: $font-size * 0.875;
+                            letter-spacing: $letter-spacing * 0.88;
+                            margin-bottom: 5px;
+                        }
+                        .not{
+                            text-decoration: line-through;
+                            color: $color-not;
+                        }
+                    }
+                }
+                .pricing-footer{
+                    button{
+                        margin-bottom: 40px;
+                    }
+                }
+            }
+        }
+    }
+}
+}
+#parallax-contact{
+    padding-top: 80px;
+    padding-bottom: 80px;
+    min-height: 215px;
+    .container{
+        .info{
+            color: $color-white;
+            font-size: $font-size * 1.375;
+            text-align: center;
+            position: relative;
+            z-index: 3;
+            p{
+                margin-bottom: 40px;
+                span{
+                    text-decoration: underline;
+                }
+            }
+            button{
+                background-color: $color-white;
+                color: $main-color;
+                font-size: $font-size * 0.75;
+                letter-spacing: $letter-spacing * 0.75;
+                text-transform: uppercase;
+                font-weight: 700;
             }
         }
     }

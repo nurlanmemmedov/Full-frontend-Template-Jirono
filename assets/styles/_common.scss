@@ -24,6 +24,10 @@ body{
    justify-content: center;
    flex-wrap: wrap;
 }
+.head{
+    padding-bottom: 18px;
+    text-align: center;
+}
 .head-title{
     font-weight: 400;
     font-size: $font-size *1.75;
@@ -37,6 +41,7 @@ body{
 }
 .desc{
     margin-bottom: 40px;
+    font-weight: 400;
 }
 .section-top{
     padding-top: $section-p-top;

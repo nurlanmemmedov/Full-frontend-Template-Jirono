@@ -34,6 +34,11 @@ body {
       flex-wrap: wrap;
 }
 
+.head {
+  padding-bottom: 18px;
+  text-align: center;
+}
+
 .head-title {
   font-weight: 400;
   font-size: 1.75rem;
@@ -49,6 +54,7 @@ body {
 
 .desc {
   margin-bottom: 40px;
+  font-weight: 400;
 }
 
 .section-top {
@@ -273,7 +279,7 @@ header nav .collapse ul .dropdown .dropdown-menu a:hover::before {
 
 header nav .collapse ul .dropdown .dropdown-menu a:hover {
   background-color: #f5f5f5;
-  padding-left: 25px;
+  padding-left: 25px !important;
 }
 
 header nav .collapse ul .dropdown:hover .dropdown-menu {
@@ -403,13 +409,11 @@ header nav .collapse form .sign-up:hover {
 }
 
 .welcome #goals .container .image-area .row-2 .image-big .detail {
+  width: 100%;
+  height: 100%;
   position: absolute;
+  z-index: 2;
   top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #585CE9;
-  opacity: 0.8;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -429,6 +433,18 @@ header nav .collapse form .sign-up:hover {
 
 .welcome #goals .container .image-area .row-2 .image-big .detail .content p {
   font-size: 1.125rem;
+}
+
+.welcome #goals .container .image-area .row-2 .image-big::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #585CE9;
+  opacity: 0.8;
+  z-index: 1;
 }
 
 .welcome #goals .container .image-area .row-2 .image-small {
@@ -652,31 +668,7 @@ header nav .collapse form .sign-up:hover {
   background-color: #FFF !important;
 }
 
-#parallax {
-  position: relative;
-  min-height: 315px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-#parallax .parallax-item {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #585CE9;
-  opacity: 0.8;
-}
-
-#parallax .container .count {
+.container .count {
   height: 280px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -693,27 +685,320 @@ header nav .collapse form .sign-up:hover {
   transition: all 0.3s ease;
 }
 
-#parallax .container .count .details {
+.container .count .details {
   position: relative;
   z-index: 4;
   color: #FFF;
   text-align: center;
 }
 
-#parallax .container .count .details h1 {
+.container .count .details h1 {
   font-size: 2.5rem;
   font-weight: 400;
 }
 
-#parallax .container .count .details p {
+.container .count .details p {
   font-size: 1.25rem;
   font-weight: 400;
   letter-spacing: 0.86px;
 }
 
-#parallax .container .count:hover {
+.container .count:hover {
   -webkit-transform: translateY(-7px);
           transform: translateY(-7px);
+}
+
+#our-team {
+  background-color: #FFF;
+}
+
+#our-team .container .content {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: wrap;
+      -ms-flex: wrap;
+          flex: wrap;
+}
+
+#our-team .container .content .member .team-item {
+  position: relative;
+  -webkit-box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
+          box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
+  border-radius: 5px;
+  margin-bottom: 55px;
+}
+
+#our-team .container .content .member .team-item .team-content {
+  text-align: center;
+}
+
+#our-team .container .content .member .team-item .team-content .team-info {
+  color: #FFF;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#our-team .container .content .member .team-item .team-content .team-info::after {
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  position: absolute;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 68px;
+  background-color: #585CE9;
+  z-index: 1;
+}
+
+#our-team .container .content .member .team-item .team-content .team-info h3 {
+  position: relative;
+  z-index: 2;
+  font-size: 1rem;
+  letter-spacing: 0.69px;
+  margin-top: 5px;
+  font-weight: 400;
+  margin: 0;
+}
+
+#our-team .container .content .member .team-item .team-content .team-info p {
+  position: relative;
+  z-index: 2;
+  font-size: 0.75rem;
+  color: #E5E9F7;
+  letter-spacing: 0.6px;
+}
+
+#our-team .container .content .member .team-item .team-content .team-contact {
+  text-align: center;
+  margin-top: 8px;
+  margin-bottom: 13px;
+  position: relative;
+  z-index: 2;
+}
+
+#our-team .container .content .member .team-item .team-content .team-contact a {
+  margin: 0 7px;
+  text-decoration: none;
+}
+
+#our-team .container .content .member .team-item .team-content .team-contact a i {
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+#our-team .container .content .member .team-item .team-content .team-description {
+  padding-bottom: 1px;
+}
+
+#our-team .container .content .member .team-item .team-content .team-description p {
+  margin-bottom: 60px !important;
+  padding: 0 25px;
+  font-weight: 400;
+  font-size: 0.875rem;
+  color: #6F8BA4;
+  letter-spacing: 0.6px;
+  line-height: 1.625rem;
+}
+
+#our-team .container .content .member .team-item .team-image {
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  width: 96px;
+  height: 96px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 100%;
+  border: 6px solid white;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -45px;
+  -webkit-box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
+          box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
+}
+
+#our-team .container .content .member .team-item:hover .team-info::after {
+  height: 125px;
+}
+
+#our-team .container .content .member .team-item:hover .team-contact a i {
+  color: #FFF;
+}
+
+#our-team .container .content .member .team-item:hover .team-image {
+  bottom: -55px;
+}
+
+#pricing {
+  background-color: #F7FAFD;
+}
+
+#pricing .container .content {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#pricing .container .content .plan .pricing-item {
+  overflow: hidden;
+  background-color: #FFF;
+  -webkit-box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
+          box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
+  text-align: center;
+  border-radius: 5px;
+}
+
+#pricing .container .content .plan .pricing-item .pricing-header {
+  height: 130px;
+  border-bottom: 1px solid #F7FAFD;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#pricing .container .content .plan .pricing-item .pricing-header h3 {
+  font-weight: 700;
+  color: #3B566E;
+  font-size: 1rem;
+}
+
+#pricing .container .content .plan .pricing-item .advanced {
+  background-color: #585CE9;
+}
+
+#pricing .container .content .plan .pricing-item .advanced h3 {
+  color: #FFF;
+}
+
+#pricing .container .content .plan .pricing-item .pricing-main {
+  margin-bottom: 40px;
+}
+
+#pricing .container .content .plan .pricing-item .pricing-main .number {
+  position: relative;
+  width: 42px;
+  height: 42px;
+  background-color: #F7FAFD;
+  line-height: 2.625rem;
+  margin: auto;
+  border-radius: 100%;
+  margin-top: -20px;
+}
+
+#pricing .container .content .plan .pricing-item .pricing-main .price-parent {
+  margin-top: 40px;
+  margin-bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#pricing .container .content .plan .pricing-item .pricing-main .price-parent .dollar {
+  font-size: 1.125rem;
+  position: relative;
+  top: -15px;
+}
+
+#pricing .container .content .plan .pricing-item .pricing-main .price-parent h1 {
+  font-weight: 700;
+  font-size: 2.125rem;
+  color: #585CE9;
+  letter-spacing: 1px 2.12;
+}
+
+#pricing .container .content .plan .pricing-item .pricing-main .price-parent .time {
+  font-size: 0.875rem;
+}
+
+#pricing .container .content .plan .pricing-item .pricing-main .price-parent span {
+  font-weight: 700;
+  color: #585CE9;
+  letter-spacing: 0.88px;
+}
+
+#pricing .container .content .plan .pricing-item .pricing-main ul {
+  padding: 0 !important;
+  list-style-type: none;
+}
+
+#pricing .container .content .plan .pricing-item .pricing-main ul li {
+  color: #3B566E;
+  font-weight: 400;
+  font-size: 0.875rem;
+  letter-spacing: 0.88px;
+  margin-bottom: 5px;
+}
+
+#pricing .container .content .plan .pricing-item .pricing-main ul .not {
+  text-decoration: line-through;
+  color: #CCDCEA;
+}
+
+#pricing .container .content .plan .pricing-item .pricing-footer button {
+  margin-bottom: 40px;
+}
+
+#parallax-contact {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  min-height: 215px;
+}
+
+#parallax-contact .container .info {
+  color: #FFF;
+  font-size: 1.375rem;
+  text-align: center;
+  position: relative;
+  z-index: 3;
+}
+
+#parallax-contact .container .info p {
+  margin-bottom: 40px;
+}
+
+#parallax-contact .container .info p span {
+  text-decoration: underline;
+}
+
+#parallax-contact .container .info button {
+  background-color: #FFF;
+  color: #585CE9;
+  font-size: 0.75rem;
+  letter-spacing: 0.75px;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
 .main-button {
@@ -732,5 +1017,29 @@ header nav .collapse form .sign-up:hover {
 
 .main-button:hover {
   background-color: #4146e6;
+}
+
+.parallax-main {
+  position: relative;
+  min-height: 315px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.parallax-main .parallax-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #585CE9;
+  opacity: 0.8;
 }
 /*# sourceMappingURL=main.css.map */
