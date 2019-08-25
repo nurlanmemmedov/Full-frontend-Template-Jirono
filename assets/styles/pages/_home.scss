@@ -1,0 +1,322 @@
+.welcome{
+    background-color: $color-white;
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    height: 100%;
+    width: 100%;
+    background-position: top left;
+    background-repeat: no-repeat;
+    #goals{
+        .container{
+            justify-content: space-between;
+            .content{
+                min-height: min-content;
+                margin-bottom: 70px;
+            }
+            .image-area{
+                margin-bottom: 70px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;;
+                height: 543px;;
+                .img-row{
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-content: space-between;
+                    width: 49%;
+                    height: 100%;
+                    .image{
+                        overflow: hidden;
+                        border-radius: $main-radius;
+                        img{
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            transition: $transition-later;
+                        }
+                        &:hover img{
+                            transform: scale(1.1);
+                        }
+                    }
+                }
+                    .row-1{
+                    
+                    .image-big{
+                        height: 332px;
+                    }
+                    .image-small{
+                        height: 200px;
+                        position: relative;
+                        button{
+                            width: 60px;
+                            height: 60px;
+                            background-color: rgba(255, 255, 255, 0.2);
+                            border-radius: 100%;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            border: 1px solid $color-white;
+                            color: white;
+                        }
+                    }
+                }
+                .row-2{
+                    .image-big{
+                        height: 281px;
+                        position: relative;
+                        .detail{
+                           position: absolute;
+                           top: 0;
+                           left: 0;
+                           right: 0;
+                           bottom: 0;
+                           background-color: $main-color;
+                           opacity: $low-opacity;
+                           display: flex;
+                           align-items: center;
+                           justify-content: center;
+                           color: $color-white;
+                           .content{
+                               font-weight: $font-weight *2/3;
+                               padding: 0 15px;
+                               p{
+                                   font-size: $font-size * 1.125;
+                               }
+                           }
+                        }
+                    }
+                    .image-small{
+                        height: 251px;
+                       
+                    }
+                }
+                
+            }
+        }
+    }
+}
+#services{
+    background-color: $color-white;
+    .service{
+        .details{
+            padding: 30px;
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            box-shadow: $shadow-light;
+            border-radius: $main-radius;
+            background-color: $color-white;
+            transition: $main-transition;
+            margin-bottom: 30px;
+            .icon{
+                width: 67px;
+                height: 67px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 100%;
+                background-color: $color-lightest-gray;
+                margin: 0 auto;
+                margin-bottom: 20px;
+                i{
+                    color: $main-color;
+                }
+               
+            }
+            .features-title{
+                margin-bottom: 15px;
+                font-size: $font-size;;
+                 color: $color-light-black;;
+                letter-spacing: $letter-spacing * 0.7;;
+
+            }
+            .features-desc{
+                font-weight: 400;
+                font-size: $font-size * 0.875;;
+                color: $color-light;;
+                letter-spacing: $letter-spacing * 0.88;
+                line-height: $line-height * 1.625;
+                margin-bottom: 0 !important;
+            }
+            &:hover{
+                background-color: $hover-blue-color;
+            }
+            &:hover .icon{
+                background-color: $color-white;
+            }
+            &:hover .features-title{
+                color: $color-white;
+            }
+            &:hover .features-desc{
+                color: $color-white;
+            }
+        }
+    }
+    
+}
+#cloud{
+    background-color: $color-lightest-gray;
+    .container{
+        justify-content: space-between;
+        .cloud-services{
+            .services{
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                .service{
+                    margin-bottom: 30px;
+                    a{
+                        box-shadow: $shadow-light;
+                        background-color: $color-white;
+                        text-decoration: none;
+                        display: block;
+                        position: relative;
+                        height: 40px;
+                        border-radius: $main-radius;
+                        overflow: hidden;
+                        z-index: 2;
+                        i{
+                            color: $color-light-black;
+                            margin-left: 22px;
+                            margin-right: 32px;
+                            padding: 12px 0;
+                            position: relative;
+                            z-index: 3;
+                            transition: $main-transition;
+                        }
+                        span{
+                            color: $color-light-black;
+                            font-size: $font-size * 0.875;
+                            position: relative;
+                            z-index: 3;
+                            transition: $main-transition;
+
+                        }
+                        &:after{
+                            position: absolute;
+                            content: "";
+                            top: 0;
+                            left: -70px;
+                            height: 100px;;
+                            width: 150px;
+                            background-color: $color-lightest-gray;
+                            z-index: 1;
+                            transform: rotate(60deg);
+                            transition: $main-transition;
+
+                        }
+                        &:hover::after{
+                            height: 150px;
+                            background-color: $main-color;
+                        }
+                        &:hover i{
+                            margin-left: 25px;
+                            margin-right: 37px;
+                            color: $color-white;
+                        }
+                    }
+                }
+                .service.active{
+                    a{
+                        box-shadow: $shadow-light;
+                        background-color: $color-white;
+                        text-decoration: none;
+                        display: block;
+                        position: relative;
+                        height: 40px;
+                        border-radius: $main-radius;
+                        overflow: hidden;
+                        z-index: 2;
+                        i{
+                            color: $color-white;
+                            margin-left: 25px;
+                            margin-right: 37px;
+                            padding: 12px 0;
+                            position: relative;
+                            z-index: 3;
+                            transition: $main-transition;
+                        }
+                        span{
+                            color: $color-light-black;
+                            font-size: $font-size * 0.875;
+                            position: relative;
+                            z-index: 3;
+                            transition: $main-transition;
+                        }
+                        &:after{
+                            position: absolute;
+                            content: "";
+                            top: 0;
+                            left: -70px;
+                            height: 150px;;
+                            width: 150px;
+                            background-color: $main-color;;
+                            z-index: 1;
+                            transform: rotate(60deg);
+                            transition: $main-transition;
+
+                        }
+                    }
+                }
+            }
+        }
+        .image-area{
+            .image{
+                text-align: center;
+                img{
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}
+.cloud-2{
+    background-color: $color-white !important;
+}
+#parallax{
+    position: relative;
+    min-height: 315px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .parallax-item{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $main-color;
+        opacity: $low-opacity;
+    
+    }
+    .container{
+        .count{
+            height: 280px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            transition: $main-transition;
+            .details{
+                position: relative;
+                z-index: 4;
+                color: $color-white;
+                text-align: center;
+                h1{
+                    font-size: $font-size* 2.5;
+                    font-weight: 400;
+                }
+                p{
+                    font-size: $font-size * 1.25;
+                    font-weight: 400;
+                    letter-spacing:  $letter-spacing * 0.86;
+                }
+            }
+            &:hover{
+                transform: translateY(-7px);
+            }
+        }
+    }
+}
