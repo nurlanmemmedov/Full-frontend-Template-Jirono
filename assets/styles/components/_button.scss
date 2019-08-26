@@ -12,7 +12,10 @@
     cursor: pointer;
     outline: none;
     @include button;
+    font-size: $font-size * 0.75;
     letter-spacing: $letter-spacing * 0.75;
+    text-transform: uppercase;
+    font-weight: 700;
     &:hover{
         background-color: $main-color-dark;
     }

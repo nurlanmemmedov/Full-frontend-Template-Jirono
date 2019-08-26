@@ -1,0 +1,66 @@
+.services-main{
+    background-color: $color-white;
+    .content{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    .service{
+        .details{
+            padding: 30px;
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            box-shadow: $shadow-light;
+            border-radius: $main-radius;
+            background-color: $color-white;
+            transition: $main-transition;
+            margin-bottom: 30px;
+            .icon{
+                width: 67px;
+                height: 67px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 100%;
+                background-color: $color-lightest-gray;
+                margin: 0 auto;
+                margin-bottom: 20px;
+                i{
+                    color: $main-color;
+                }
+               
+            }
+            .features-title{
+                margin-bottom: 15px;
+                font-size: $font-size;;
+                 color: $color-light-black;;
+                letter-spacing: $letter-spacing * 0.7;;
+
+            }
+            .features-desc{
+                font-weight: 400;
+                font-size: $font-size * 0.875;;
+                color: $color-light;;
+                letter-spacing: $letter-spacing * 0.88;
+                line-height: $line-height * 1.625;
+                margin-bottom: 0 !important;
+            }
+            &:hover{
+                background-color: $main-color;
+            }
+            &:hover .icon{
+                background-color: $color-white;
+            }
+            &:hover .features-title{
+                color: $color-white;
+            }
+            &:hover .features-desc{
+                color: $color-white;
+            }
+        }
+    }
+}
+    
+}

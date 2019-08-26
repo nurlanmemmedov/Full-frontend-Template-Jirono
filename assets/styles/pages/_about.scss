@@ -1,0 +1,116 @@
+.parallax-2nd{
+    z-index: -3 ;
+}
+
+#parallax-about{
+    min-height: 270px;
+    .container{
+        position: absolute !important;
+        bottom: 50px;
+    .description{
+        text-align: center;
+        h1{
+        font-weight: 400;
+        font-size: 2.25 * $font-size;
+        line-height: $line-height * 2.875;
+        letter-spacing: 1.4 * $letter-spacing;
+        color: $color-white;
+        height: 50px;
+        position: relative;
+        &::after{
+            content: '';
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+            margin: auto;
+            width: 19px;
+            height: 2px;
+            background: $color-white;
+        }
+        }
+        p{
+            font-weight: 400;
+            font-size: $font-size * 0.875;
+            color: $color-light-p;
+            line-height: $line-height *1.875;
+            margin-top: 8px;
+            a{
+                color: $color-white;
+                text-decoration: none;
+            }
+            i{
+                margin: 0 10px;
+            }
+        }
+    }
+}
+}
+#services-about{
+    background-color: $color-light-gray;
+}
+.mission-main{
+    background-color: $color-light-gray;
+    padding-bottom: 100px;
+    .container{
+        position: relative;
+        justify-content: space-between;
+        .image-mission{
+            height: 500px;
+            overflow: hidden;
+            width: 70%;
+            position: relative;;
+            z-index: 1;
+            border-radius: $main-radius;
+            .image{
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: $transition-later;
+                }
+            }
+            &:hover img{
+                transform: scale(1.1);
+            }
+        }
+        .text-mission{
+            width: 40%;
+            position: absolute;
+            z-index:2;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            border-radius: $main-radius;
+            background-color: $color-white;
+            box-shadow: $shadow-light;
+            padding: 30px;
+            padding-bottom: 10px;
+            h2{
+                font-weight: 400;
+                font-size: $font-size *1.5;
+                line-height: 2.375 *$line-height;
+                letter-spacing: 1.75 * $letter-spacing;
+                color: $color-light-black;
+                margin-bottom: 20px;
+            }
+            p{
+                font-weight: 400;
+                font-size: $font-size * 0.875;
+                line-height: $line-height * 1.625;
+                margin-bottom: 20px;
+
+            }
+        }
+    }
+}
+#mission-2{
+    .container{
+    .text-mission{
+        left: 0 !important;
+    }
+    .image-mission{
+        margin-left: auto;
+    }
+}
+}

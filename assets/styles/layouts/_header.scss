@@ -1,7 +1,7 @@
 .sticky{
-    box-shadow: $main-shadow;
-    background-color: $color-white;
-    position: fixed;
+    box-shadow: $main-shadow !important;
+    background-color: $color-white !important;
+    position: fixed !important;
     top: 0;
     left: 0;
     right: 0;
@@ -92,9 +92,9 @@ header{
                             top: 50%;
                             right: 5%;
                         }
-
                     }
                     .dropdown-menu{
+                        margin-left: 15px;
                         width: 200px;
                         padding: 0;
                         margin-top: 0;
@@ -105,7 +105,7 @@ header{
                         display: block;
                         visibility: hidden;
                         opacity: 0;
-                        transform: translateY(-3em);
+                        transform: translateY(-2em);
                         a{
                             padding-left: 20px;
                             line-height: $line-height * 2.5;
@@ -164,4 +164,7 @@ header{
             }
         }
     }
+}
+.colorfull{
+    background-color: $color-white;
 }

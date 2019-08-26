@@ -14,4 +14,8 @@
         opacity: $low-opacity;
     
     }
+    .container{
+        position: relative;
+        z-index:2;
+    }
 }
