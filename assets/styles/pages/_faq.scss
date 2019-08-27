@@ -1,0 +1,77 @@
+#questions{
+    background-color: $color-white;
+    .container{
+        align-items: stretch;
+        .help{
+            .help-item{
+                h1{
+                    font-weight: 400;
+                    font-size: $font-size * 1.875;
+                    color: $main-color;
+                    letter-spacing: $letter-spacing * 1.88;
+                    margin-bottom: 20px;
+                }
+                p{
+                    font-weight: 400;
+                    color: $color-light;
+                    margin-bottom: 28px;
+                }
+                button{
+                    margin-bottom: 40px;
+                }
+            }
+        }
+        .question{
+            .faq{
+            background-color: $color-white;
+            border-radius: $main-radius;
+            box-shadow: $shadow-light;
+            .faq-item{
+                .faq-header{
+                    border-bottom: 1px solid $color-lightest-gray;
+                    transition: $main-transition;
+                    h5{
+                        width: 100%;
+                        text-align: left;
+                        padding: 20px 30px;
+                        font-weight: 400;
+                        font-size: $font-size * 0.9375;
+                        letter-spacing: $letter-spacing;
+                        color: $color-light-black;
+                        transition: $main-transition;
+                        cursor: pointer;
+                        margin: 0 !important;
+                    }
+                    &:hover{
+                        background-color: $color-lightest-gray;
+                        padding-left: 10px;
+                    }
+                    }
+                .faq-content{
+                    max-height: 0;
+                    transition: max-height 0.3s ease;
+                    overflow: hidden;
+                    .content-wrap{
+                        padding: 30px;
+                        padding-left: 35px;
+                        padding-bottom: 16px;
+                        border-bottom: 1px solid $color-lightest-gray;;
+                    p{
+                        font-weight: 400;
+                        font-size: $font-size * 0.875;
+                        color: $color-light;
+                        line-height: $line-height * 1.75;;
+                        letter-spacing: $letter-spacing * 0.88;
+                    }
+                }
+                }
+                .faq-content.show{
+                    transition: max-height 0.3s ease;
+                    max-height: 220px;;
+                }
+               
+            }
+            }
+    }
+    }
+}

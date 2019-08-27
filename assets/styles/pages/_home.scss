@@ -13,6 +13,9 @@
             .content{
                 min-height: min-content;
                 margin-bottom: 70px;
+                button{
+                    width: 170px !important;
+                }
             }
             .image-area{
                 margin-bottom: 70px;
@@ -106,123 +109,8 @@
         }
     }
 }
-#cloud{
-    background-color: $color-lightest-gray;
-    .container{
-        justify-content: space-between;
-        .cloud-services{
-            .services{
-                display: flex;
-                align-items: center;
-                flex-wrap: wrap;
-                .service{
-                    margin-bottom: 30px;
-                    a{
-                        box-shadow: $shadow-light;
-                        background-color: $color-white;
-                        text-decoration: none;
-                        display: block;
-                        position: relative;
-                        height: 40px;
-                        border-radius: $main-radius;
-                        overflow: hidden;
-                        z-index: 2;
-                        i{
-                            color: $color-light-black;
-                            margin-left: 22px;
-                            margin-right: 32px;
-                            padding: 12px 0;
-                            position: relative;
-                            z-index: 3;
-                            transition: $main-transition;
-                        }
-                        span{
-                            color: $color-light-black;
-                            font-size: $font-size * 0.875;
-                            position: relative;
-                            z-index: 3;
-                            transition: $main-transition;
 
-                        }
-                        &:after{
-                            position: absolute;
-                            content: "";
-                            top: 0;
-                            left: -70px;
-                            height: 100px;;
-                            width: 150px;
-                            background-color: $color-lightest-gray;
-                            z-index: 1;
-                            transform: rotate(60deg);
-                            transition: $main-transition;
-
-                        }
-                        &:hover::after{
-                            height: 150px;
-                            background-color: $main-color;
-                        }
-                        &:hover i{
-                            margin-left: 25px;
-                            margin-right: 37px;
-                            color: $color-white;
-                        }
-                    }
-                }
-                .service.active{
-                    a{
-                        box-shadow: $shadow-light;
-                        background-color: $color-white;
-                        text-decoration: none;
-                        display: block;
-                        position: relative;
-                        height: 40px;
-                        border-radius: $main-radius;
-                        overflow: hidden;
-                        z-index: 2;
-                        i{
-                            color: $color-white;
-                            margin-left: 25px;
-                            margin-right: 37px;
-                            padding: 12px 0;
-                            position: relative;
-                            z-index: 3;
-                            transition: $main-transition;
-                        }
-                        span{
-                            color: $color-light-black;
-                            font-size: $font-size * 0.875;
-                            position: relative;
-                            z-index: 3;
-                            transition: $main-transition;
-                        }
-                        &:after{
-                            position: absolute;
-                            content: "";
-                            top: 0;
-                            left: -70px;
-                            height: 150px;;
-                            width: 150px;
-                            background-color: $main-color;;
-                            z-index: 1;
-                            transform: rotate(60deg);
-                            transition: $main-transition;
-
-                        }
-                    }
-                }
-            }
-        }
-        .image-area{
-            .image{
-                text-align: center;
-                img{
-                    object-fit: cover;
-                }
-            }
-        }
-    }
-}
-.cloud-2{
+#cloud-reverse{
     background-color: $color-white !important;
 }
 #parallax{

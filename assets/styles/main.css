@@ -394,6 +394,8 @@ header nav .collapse form button {
   padding: 0 25px;
   margin-left: 15px;
   border: 1px solid #585CE9;
+  width: auto !important;
+  height: 32px;
 }
 
 header nav .collapse form .sign-in {
@@ -437,6 +439,10 @@ header nav .collapse form .sign-up:hover {
   min-height: -moz-min-content;
   min-height: min-content;
   margin-bottom: 70px;
+}
+
+.welcome #goals .container .content button {
+  width: 170px !important;
 }
 
 .welcome #goals .container .image-area {
@@ -555,148 +561,7 @@ header nav .collapse form .sign-up:hover {
   height: 251px;
 }
 
-#cloud {
-  background-color: #F7FAFD;
-}
-
-#cloud .container {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-#cloud .container .cloud-services .services {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-#cloud .container .cloud-services .services .service {
-  margin-bottom: 30px;
-}
-
-#cloud .container .cloud-services .services .service a {
-  -webkit-box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
-          box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
-  background-color: #FFF;
-  text-decoration: none;
-  display: block;
-  position: relative;
-  height: 40px;
-  border-radius: 5px;
-  overflow: hidden;
-  z-index: 2;
-}
-
-#cloud .container .cloud-services .services .service a i {
-  color: #3B566E;
-  margin-left: 22px;
-  margin-right: 32px;
-  padding: 12px 0;
-  position: relative;
-  z-index: 3;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-
-#cloud .container .cloud-services .services .service a span {
-  color: #3B566E;
-  font-size: 0.875rem;
-  position: relative;
-  z-index: 3;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-
-#cloud .container .cloud-services .services .service a:after {
-  position: absolute;
-  content: "";
-  top: 0;
-  left: -70px;
-  height: 100px;
-  width: 150px;
-  background-color: #F7FAFD;
-  z-index: 1;
-  -webkit-transform: rotate(60deg);
-          transform: rotate(60deg);
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-
-#cloud .container .cloud-services .services .service a:hover::after {
-  height: 150px;
-  background-color: #585CE9;
-}
-
-#cloud .container .cloud-services .services .service a:hover i {
-  margin-left: 25px;
-  margin-right: 37px;
-  color: #FFF;
-}
-
-#cloud .container .cloud-services .services .service.active a {
-  -webkit-box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
-          box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
-  background-color: #FFF;
-  text-decoration: none;
-  display: block;
-  position: relative;
-  height: 40px;
-  border-radius: 5px;
-  overflow: hidden;
-  z-index: 2;
-}
-
-#cloud .container .cloud-services .services .service.active a i {
-  color: #FFF;
-  margin-left: 25px;
-  margin-right: 37px;
-  padding: 12px 0;
-  position: relative;
-  z-index: 3;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-
-#cloud .container .cloud-services .services .service.active a span {
-  color: #3B566E;
-  font-size: 0.875rem;
-  position: relative;
-  z-index: 3;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-
-#cloud .container .cloud-services .services .service.active a:after {
-  position: absolute;
-  content: "";
-  top: 0;
-  left: -70px;
-  height: 150px;
-  width: 150px;
-  background-color: #585CE9;
-  z-index: 1;
-  -webkit-transform: rotate(60deg);
-          transform: rotate(60deg);
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-
-#cloud .container .image-area .image {
-  text-align: center;
-}
-
-#cloud .container .image-area .image img {
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.cloud-2 {
+#cloud-reverse {
   background-color: #FFF !important;
 }
 
@@ -1105,58 +970,6 @@ header nav .collapse form .sign-up:hover {
   z-index: -3;
 }
 
-#parallax-about {
-  min-height: 270px;
-}
-
-#parallax-about .container {
-  position: absolute !important;
-  bottom: 50px;
-}
-
-#parallax-about .container .description {
-  text-align: center;
-}
-
-#parallax-about .container .description h1 {
-  font-weight: 400;
-  font-size: 2.25rem;
-  line-height: 2.875rem;
-  letter-spacing: 1.4px;
-  color: #FFF;
-  height: 50px;
-  position: relative;
-}
-
-#parallax-about .container .description h1::after {
-  content: '';
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
-  margin: auto;
-  width: 19px;
-  height: 2px;
-  background: #FFF;
-}
-
-#parallax-about .container .description p {
-  font-weight: 400;
-  font-size: 0.875rem;
-  color: #E5E9F7;
-  line-height: 1.875rem;
-  margin-top: 8px;
-}
-
-#parallax-about .container .description p a {
-  color: #FFF;
-  text-decoration: none;
-}
-
-#parallax-about .container .description p i {
-  margin: 0 10px;
-}
-
 #services-about {
   background-color: #f5f5f5;
 }
@@ -1236,13 +1049,100 @@ header nav .collapse form .sign-up:hover {
   margin-left: auto;
 }
 
+#questions {
+  background-color: #FFF;
+}
+
+#questions .container {
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+#questions .container .help .help-item h1 {
+  font-weight: 400;
+  font-size: 1.875rem;
+  color: #585CE9;
+  letter-spacing: 1.88px;
+  margin-bottom: 20px;
+}
+
+#questions .container .help .help-item p {
+  font-weight: 400;
+  color: #6F8BA4;
+  margin-bottom: 28px;
+}
+
+#questions .container .help .help-item button {
+  margin-bottom: 40px;
+}
+
+#questions .container .question .faq {
+  background-color: #FFF;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
+          box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
+}
+
+#questions .container .question .faq .faq-item .faq-header {
+  border-bottom: 1px solid #F7FAFD;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+#questions .container .question .faq .faq-item .faq-header h5 {
+  width: 100%;
+  text-align: left;
+  padding: 20px 30px;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  letter-spacing: 1px;
+  color: #3B566E;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin: 0 !important;
+}
+
+#questions .container .question .faq .faq-item .faq-header:hover {
+  background-color: #F7FAFD;
+  padding-left: 10px;
+}
+
+#questions .container .question .faq .faq-item .faq-content {
+  max-height: 0;
+  -webkit-transition: max-height 0.3s ease;
+  transition: max-height 0.3s ease;
+  overflow: hidden;
+}
+
+#questions .container .question .faq .faq-item .faq-content .content-wrap {
+  padding: 30px;
+  padding-left: 35px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #F7FAFD;
+}
+
+#questions .container .question .faq .faq-item .faq-content .content-wrap p {
+  font-weight: 400;
+  font-size: 0.875rem;
+  color: #6F8BA4;
+  line-height: 1.75rem;
+  letter-spacing: 0.88px;
+}
+
+#questions .container .question .faq .faq-item .faq-content.show {
+  -webkit-transition: max-height 0.3s ease;
+  transition: max-height 0.3s ease;
+  max-height: 220px;
+}
+
 .main-button {
   background-color: #585CE9;
   border-radius: 5px;
   border: none;
   color: #FFF;
   line-height: 2.75rem;
-  padding: 0 40px;
   cursor: pointer;
   outline: none;
   -webkit-transition: all .3s ease-in;
@@ -1251,10 +1151,153 @@ header nav .collapse form .sign-up:hover {
   letter-spacing: 0.75px;
   text-transform: uppercase;
   font-weight: 700;
+  width: 160px;
+  height: 44px;
 }
 
 .main-button:hover {
   background-color: #4146e6;
+}
+
+.cloud-main {
+  background-color: #F7FAFD;
+}
+
+.cloud-main .container {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.cloud-main .container .cloud-services .services {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.cloud-main .container .cloud-services .services .service {
+  margin-bottom: 30px;
+}
+
+.cloud-main .container .cloud-services .services .service a {
+  -webkit-box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
+          box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
+  background-color: #FFF;
+  text-decoration: none;
+  display: block;
+  position: relative;
+  height: 40px;
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.cloud-main .container .cloud-services .services .service a i {
+  color: #3B566E;
+  margin-left: 22px;
+  margin-right: 32px;
+  padding: 12px 0;
+  position: relative;
+  z-index: 3;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.cloud-main .container .cloud-services .services .service a span {
+  color: #3B566E;
+  font-size: 0.875rem;
+  position: relative;
+  z-index: 3;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.cloud-main .container .cloud-services .services .service a:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: -70px;
+  height: 100px;
+  width: 150px;
+  background-color: #F7FAFD;
+  z-index: 1;
+  -webkit-transform: rotate(60deg);
+          transform: rotate(60deg);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.cloud-main .container .cloud-services .services .service a:hover::after {
+  height: 150px;
+  background-color: #585CE9;
+}
+
+.cloud-main .container .cloud-services .services .service a:hover i {
+  margin-left: 25px;
+  margin-right: 37px;
+  color: #FFF;
+}
+
+.cloud-main .container .cloud-services .services .service.active a {
+  -webkit-box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
+          box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
+  background-color: #FFF;
+  text-decoration: none;
+  display: block;
+  position: relative;
+  height: 40px;
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.cloud-main .container .cloud-services .services .service.active a i {
+  color: #FFF;
+  margin-left: 25px;
+  margin-right: 37px;
+  padding: 12px 0;
+  position: relative;
+  z-index: 3;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.cloud-main .container .cloud-services .services .service.active a span {
+  color: #3B566E;
+  font-size: 0.875rem;
+  position: relative;
+  z-index: 3;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.cloud-main .container .cloud-services .services .service.active a:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: -70px;
+  height: 150px;
+  width: 150px;
+  background-color: #585CE9;
+  z-index: 1;
+  -webkit-transform: rotate(60deg);
+          transform: rotate(60deg);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.cloud-main .container .image-area .image {
+  text-align: center;
+}
+
+.cloud-main .container .image-area .image img {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .parallax-main {
@@ -1284,6 +1327,58 @@ header nav .collapse form .sign-up:hover {
 .parallax-main .container {
   position: relative;
   z-index: 2;
+}
+
+.parallax-page-head {
+  min-height: 270px;
+}
+
+.parallax-page-head .container {
+  position: absolute !important;
+  bottom: 50px;
+}
+
+.parallax-page-head .container .description {
+  text-align: center;
+}
+
+.parallax-page-head .container .description h1 {
+  font-weight: 400;
+  font-size: 2.25rem;
+  line-height: 2.875rem;
+  letter-spacing: 1.4px;
+  color: #FFF;
+  height: 50px;
+  position: relative;
+}
+
+.parallax-page-head .container .description h1::after {
+  content: '';
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin: auto;
+  width: 19px;
+  height: 2px;
+  background: #FFF;
+}
+
+.parallax-page-head .container .description p {
+  font-weight: 400;
+  font-size: 0.875rem;
+  color: #E5E9F7;
+  line-height: 1.875rem;
+  margin-top: 8px;
+}
+
+.parallax-page-head .container .description p a {
+  color: #FFF;
+  text-decoration: none;
+}
+
+.parallax-page-head .container .description p i {
+  margin: 0 10px;
 }
 
 .services-main {

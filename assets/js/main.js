@@ -73,6 +73,25 @@ $(document).ready(function () {
         }
     })
 
+    //to make the faq content appear
+    // for(let i=0; i<$('.faq-header').length; i++){
+    //     $('.faq-header')[i].click(()=>{
+    //         $('.faq-content')[i].toggleClass('show');
+    //     })
+    // }
+    // $('.faq-header').click(()=>{
+    //     $('.faq-content').toggleClass('show');
+    // })
+
+
+    $('.faq-header').each(function(index,item){
+        $('.faq-header').eq(index).click(()=>{
+            $('.faq-content').not(':eq('+index +')').removeClass('show');
+            $('.faq-content').eq(index).toggleClass('show')
+            $('.faq-header').eq(index).toggleClass('collapsed')
+
+        })
+     });
 
 
 

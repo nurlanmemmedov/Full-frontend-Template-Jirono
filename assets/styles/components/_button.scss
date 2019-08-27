@@ -8,7 +8,6 @@
     border: none;
     color: $color-white;
     line-height: $line-height * 2.75;
-    padding: 0 40px;
     cursor: pointer;
     outline: none;
     @include button;
@@ -16,6 +15,8 @@
     letter-spacing: $letter-spacing * 0.75;
     text-transform: uppercase;
     font-weight: 700;
+    width: 160px;
+    height: 44px;
     &:hover{
         background-color: $main-color-dark;
     }
