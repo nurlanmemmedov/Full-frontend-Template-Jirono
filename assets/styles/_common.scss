@@ -7,6 +7,9 @@ body{
     color: $color-body;
     line-height: $line-height * 1.75;
 }
+a{
+    text-decoration: none !important;
+}
 .parallax{
     position: fixed;
     top: 0;
