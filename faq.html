@@ -1,33 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="./assets//js/jquery-3.4.1.min.js"></script>
-    <script src="./assets/bootstrap/popper.min.js"></script>
+    <!--bootstrap css-->
     <link rel="stylesheet" href="./assets/bootstrap/bootstrap.css">
-    <script src="./assets/bootstrap/bootstrap.js"></script>
-    <link rel="stylesheet" href="./assets/owl-carousel/owl.carousel.min.css">
-    <link rel="stylesheet" href="./assets/owl-carousel/owl.theme.default.min.css">
-    <script src="./assets/owl-carousel/owl.carousel.min.js"></script>
+    <!--font Awesome css-->
     <link rel="stylesheet" href="./assets/font-awesome/css/all.min.css">
+    <!--google font-->
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300i,400,400i,600,700,800,900&display=swap"
         rel="stylesheet">
+    <!--main css-->
     <link rel="stylesheet" href="./assets/styles/main.css">
     <title>Document</title>
 </head>
-
 <body>
     <div class="parallax" style="background-image: url('./assets/images/2.jpg')">
     </div>
+    <!--header starts-->
     <header class="colorfull">
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light">
+                <!--navbar brand starts-->
                 <a class="navbar-brand" href="./index.html">
                     <img src="./assets/images/logo-blue.png" alt="">
                 </a>
+                <!--navbar brand ends-->
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -36,6 +35,7 @@
                     <div class="icon-bar bottom-bar"></div>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <!--menu starts-->
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
                             <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
@@ -46,10 +46,10 @@
                                 Discover
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item features-button" href="./index.html">Features</a>
-                                <a class="dropdown-item team-button" href="./index.html">Our Team</a>
-                                <a class="dropdown-item pricing-button" href="./index.html">Pricing Plans</a>
-                                <a class="dropdown-item blogs-button" href="./index.html">Latests-Blogs</a>
+                                <a class="dropdown-item features-button" href="#">Features</a>
+                                <a class="dropdown-item team-button" href="#">Our Team</a>
+                                <a class="dropdown-item pricing-button" href="#">Pricing Plans</a>
+                                <a class="dropdown-item blogs-button" href="#">Latests-Blogs</a>
 
                             </div>
                         </li>
@@ -60,7 +60,7 @@
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="./about.html">About Us</a>
-                                <a class="dropdown-item" href="">Features</a>
+                                <a class="dropdown-item" href="./features.html">Features</a>
                                 <a class="dropdown-item" href="./faq.html">FAQ's</a>
                                 <a class="dropdown-item" href="./blog.html">Blogs</a>
                             </div>
@@ -69,14 +69,19 @@
                             <a class="nav-link" href="./contact.html">Contact</a>
                         </li>
                     </ul>
+                    <!--menu ends-->
+                    <!--sign button starts-->
                     <form class="form-inline my-2 my-lg-0">
                         <button class="main-button sign-in" type="submit">Sign-in</button>
                         <button class="main-button sign-up" type="submit">Sign-up</button>
                     </form>
+                    <!--sign button ends-->
                 </div>
             </nav>
         </div>
     </header>
+    <!--header ends-->
+    <!--main starts-->
     <main class="margin-from-header">
         <section id="parallax-faq" class="parallax-main parallax-page-head">
             <div class="parallax-item">
@@ -88,7 +93,8 @@
                 </div>
             </div>
         </section>
-        <section id="questions" class="section-top section-bottom">
+        <!--faqs starts-->
+        <section id="faqs" class="section-top section-bottom">
             <div class="container">
                 <div class="col-lg-6 col-md-12 col-sm-12 col-12 help">
                     <div class="help-item">
@@ -155,9 +161,12 @@
                 </div>
             </div>
         </section>
-        <section id="cloud" class="section-top section-bottom cloud-main">
+        <!--faqs ends-->
+        <!--cloud services start-->
+        <section id="cloud-services" class="section-top section-bottom cloud-main">
             <div class="container">
                 <div class="col-lg-6 col-md-12 col-sm-12 cloud-services mobile-bottom">
+                    <!--services head-title starts-->
                     <h1 class="head-title">
                         Cloud services
                     </h1>
@@ -165,55 +174,72 @@
                         Phasellus vitae velit sit amet diam semper commodo quis quis libero. Morbi consequat arcu augue,
                         molestie faucibus metus ullamcorper vel
                     </p>
+                    <!--services head-title ends-->
                     <div class="services row">
+                        <!--cloud-service item starts-->
                         <div class="service col-lg-6 col-md-6 col-sm-12 col-12 active">
                             <a href="">
                                 <i class="fa fa-angle-right"></i>
                                 <span>NearCloud</span>
                             </a>
                         </div>
+                        <!--cloud-service item ends-->
+                        <!--cloud-service item starts-->
                         <div class="service col-lg-6 col-md-6 col-sm-12 col-12">
                             <a href="">
                                 <i class="fa fa-angle-right"></i>
                                 <span>Cloud Hosting</span>
                             </a>
                         </div>
+                        <!--cloud-service item ends-->
+                        <!--cloud-service item starts-->
                         <div class="service col-lg-6 col-md-6 col-sm-12 col-12">
                             <a href="">
                                 <i class="fa fa-angle-right"></i>
                                 <span>Office Cloud</span>
                             </a>
                         </div>
+                        <!--cloud-service item ends-->
+                        <!--cloud-service item starts-->
                         <div class="service col-lg-6 col-md-6 col-sm-12 col-12">
                             <a href="">
                                 <i class="fa fa-angle-right"></i>
                                 <span>Backup Systems</span>
                             </a>
                         </div>
+                        <!--cloud-service item ends-->
+                        <!--cloud-service item starts-->
                         <div class="service col-lg-6 col-md-6 col-sm-12 col-12">
                             <a href="">
                                 <i class="fa fa-angle-right"></i>
                                 <span>Hybrid Cloud</span>
                             </a>
                         </div>
+                        <!--cloud-service item ends-->
+                        <!--cloud-service item starts-->
                         <div class="service col-lg-6 col-md-6 col-sm-12 col-12">
                             <a href="">
                                 <i class="fa fa-angle-right"></i>
                                 <span>API Cloud</span>
                             </a>
                         </div>
+                        <!--cloud-service item ends-->
+                        <!--cloud-service item starts-->
                         <div class="service col-lg-6  col-md-6 col-sm-12 col-12">
                             <a href="">
                                 <i class="fa fa-angle-right"></i>
                                 <span>SDK Cloud</span>
                             </a>
                         </div>
+                        <!--cloud-service item ends-->
+                        <!--cloud-service item starts-->
                         <div class="service col-lg-6  col-md-6 col-sm-12 col-12">
                             <a href="">
                                 <i class="fa fa-angle-right"></i>
                                 <span>Web Services</span>
                             </a>
                         </div>
+                        <!--cloud-service item ends-->
                     </div>
                 </div>
                 <div class="image-area col-lg-5 col-md-12 col-sm-12 mobile-bottom">
@@ -223,7 +249,10 @@
                 </div>
             </div>
         </section>
+        <!--cloud services end-->
     </main>
+    <!--main ends-->
+    <!--footer srtarts-->
     <footer>
         <div class="container">
             <div class="content">
@@ -298,7 +327,14 @@
             </div>
         </div>
     </footer>
+    <!--footer ends-->
+    <!--scripts start-->
+    <!--bootstrap-->
+    <script src="./assets/bootstrap/popper.min.js"></script>
+    <!--jquery-->
+    <script src="./assets//js/jquery-3.4.1.min.js"></script>
+    <!--javascript-->
     <script src="./assets/js/main.js"></script>
+    <!--scripts end-->
 </body>
-
 </html>

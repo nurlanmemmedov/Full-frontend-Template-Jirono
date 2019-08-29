@@ -1,12 +1,15 @@
+/* main cloud sections' properties start */
 .cloud-main{
     background-color: $color-lightest-gray;
     .container{
         justify-content: space-between;
+        /* cloud services start */
         .cloud-services{
             .services{
                 display: flex;
                 align-items: center;
                 flex-wrap: wrap;
+                /* service item starts */
                 .service{
                     margin-bottom: 30px;
                     a{
@@ -60,6 +63,8 @@
                         }
                     }
                 }
+                /* service item starts */
+                /* active service item */
                 .service.active{
                     a{
                         box-shadow: $shadow-light;
@@ -102,8 +107,10 @@
                         }
                     }
                 }
+                /* active service item ends */
             }
         }
+        /* cloud services end */
         .image-area{
             .image{
                 text-align: center;
@@ -114,3 +121,4 @@
         }
     }
 }
+/* main cloud sections' properties end */

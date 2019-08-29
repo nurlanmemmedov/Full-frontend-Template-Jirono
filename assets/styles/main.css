@@ -1,3 +1,4 @@
+/* body properties */
 body {
   font-family: "Nunito Sans", sans-serif;
   font-size: 1rem;
@@ -8,10 +9,12 @@ body {
   line-height: 1.75rem;
 }
 
+/* common a tags */
 a {
   text-decoration: none !important;
 }
 
+/* common parallaxes */
 .parallax {
   position: fixed;
   top: 0;
@@ -23,6 +26,7 @@ a {
   background-size: cover;
 }
 
+/* common container properties */
 .container {
   padding: 0;
   display: -webkit-box;
@@ -38,6 +42,7 @@ a {
       flex-wrap: wrap;
 }
 
+/* sections head title starts */
 .head {
   padding-bottom: 18px;
   text-align: center;
@@ -61,14 +66,18 @@ a {
   font-weight: 400;
 }
 
+/* sections head title ends */
+/* common sections' top padding */
 .section-top {
   padding-top: 100px;
 }
 
+/* common sections' bottom padding */
 .section-bottom {
   padding-bottom: 70px;
 }
 
+/* when screen is medium */
 @media screen and (max-width: 995px) {
   .mobile-bottom {
     margin-bottom: 30px;
@@ -147,10 +156,12 @@ a {
   }
 }
 
+/* common main's margin from header */
 .margin-from-header {
   margin-top: 80px;
 }
 
+/* footer starts */
 footer {
   padding-top: 70px;
   background-color: #585CE9;
@@ -233,17 +244,8 @@ footer .container .copyright {
   padding: 30px 0;
 }
 
-.sticky {
-  -webkit-box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.06) !important;
-          box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.06) !important;
-  background-color: #FFF !important;
-  position: fixed !important;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 9999;
-}
-
+/* footer ends */
+/* header starts */
 header {
   position: fixed;
   top: 0;
@@ -310,6 +312,11 @@ header nav .navbar-toggler.coll .bottom-bar {
           transform: rotate(-45deg);
   -webkit-transform-origin: 10% 90%;
           transform-origin: 10% 90%;
+}
+
+header nav .collapse {
+  /* menu starts */
+  /* menu ends */
 }
 
 header nav .collapse ul {
@@ -417,10 +424,20 @@ header nav .collapse form .sign-up:hover {
   background-color: transparent;
 }
 
+/* header ends */
+/* backcolor white header */
+.white {
+  -webkit-box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.06) !important;
+          box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.06) !important;
+  background-color: #FFF !important;
+}
+
+/* colored header */
 .colorfull {
   background-color: #FFF;
 }
 
+/* welcome area properties start */
 .welcome {
   background-color: #FFF;
   position: relative;
@@ -565,15 +582,19 @@ header nav .collapse form .sign-up:hover {
   height: 251px;
 }
 
-#cloud-reverse {
+/* welcome area properties end */
+/* developmennt services section start */
+#development-services {
   background-color: #FFF !important;
 }
 
+/* developmennt services section end */
+/* parallax section starts */
 #parallax {
   padding: 60px 0;
 }
 
-.container .count {
+#parallax .container .count {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -590,29 +611,31 @@ header nav .collapse form .sign-up:hover {
   padding: 20px 0;
 }
 
-.container .count .details {
+#parallax .container .count .details {
   position: relative;
   z-index: 4;
   color: #FFF;
   text-align: center;
 }
 
-.container .count .details h1 {
+#parallax .container .count .details h1 {
   font-size: 2.5rem;
   font-weight: 400;
 }
 
-.container .count .details p {
+#parallax .container .count .details p {
   font-size: 1.25rem;
   font-weight: 400;
   letter-spacing: 0.86px;
 }
 
-.container .count:hover {
+#parallax .container .count:hover {
   -webkit-transform: translateY(-7px);
           transform: translateY(-7px);
 }
 
+/* parallax section ends */
+/* our team section starts */
 #our-team {
   background-color: #FFF;
 }
@@ -744,6 +767,8 @@ header nav .collapse form .sign-up:hover {
   bottom: -55px;
 }
 
+/* our team section ends */
+/* pricing section starts */
 #pricing {
   background-color: #F7FAFD;
 }
@@ -872,6 +897,8 @@ header nav .collapse form .sign-up:hover {
   margin-bottom: 40px;
 }
 
+/* pricing section ends */
+/* parallax contact section starts */
 #parallax-contact {
   padding-top: 80px;
   padding-bottom: 80px;
@@ -903,6 +930,8 @@ header nav .collapse form .sign-up:hover {
   background-color: #F7FAFD;
 }
 
+/* parallax contact section ends */
+/* latest blogs section starts */
 #latest-blogs {
   background-color: #FFF;
 }
@@ -970,14 +999,20 @@ header nav .collapse form .sign-up:hover {
   width: 160px;
 }
 
+/* latest blogs section ends */
+/* parallax 2nd image starts*/
 .parallax-2nd {
   z-index: -3;
 }
 
+/* parallax 2nd image ends*/
+/* services section at about page start */
 #services-about {
   background-color: #f5f5f5;
 }
 
+/* services section at about page end */
+/* mission sections main properties start */
 .mission-main {
   background-color: #f5f5f5;
   padding-bottom: 100px;
@@ -1045,25 +1080,29 @@ header nav .collapse form .sign-up:hover {
   margin-bottom: 20px;
 }
 
-#mission-2 .container .text-mission {
+/* mission sections main properties end */
+/* vision section starts */
+#vision .container .text-mission {
   left: 0 !important;
 }
 
-#mission-2 .container .image-mission {
+#vision .container .image-mission {
   margin-left: auto;
 }
 
-#questions {
+/* vision section ends */
+/* faqs section starts */
+#faqs {
   background-color: #FFF;
 }
 
-#questions .container {
+#faqs .container {
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
 }
 
-#questions .container .help .help-item h1 {
+#faqs .container .help .help-item h1 {
   font-weight: 400;
   font-size: 1.875rem;
   color: #585CE9;
@@ -1071,30 +1110,30 @@ header nav .collapse form .sign-up:hover {
   margin-bottom: 20px;
 }
 
-#questions .container .help .help-item p {
+#faqs .container .help .help-item p {
   font-weight: 400;
   color: #6F8BA4;
   margin-bottom: 28px;
 }
 
-#questions .container .help .help-item button {
+#faqs .container .help .help-item button {
   margin-bottom: 40px;
 }
 
-#questions .container .question .faq {
+#faqs .container .question .faq {
   background-color: #FFF;
   border-radius: 5px;
   -webkit-box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
           box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
 }
 
-#questions .container .question .faq .faq-item .faq-header {
+#faqs .container .question .faq .faq-item .faq-header {
   border-bottom: 1px solid #F7FAFD;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
-#questions .container .question .faq .faq-item .faq-header h5 {
+#faqs .container .question .faq .faq-item .faq-header h5 {
   width: 100%;
   text-align: left;
   padding: 20px 30px;
@@ -1108,26 +1147,26 @@ header nav .collapse form .sign-up:hover {
   margin: 0 !important;
 }
 
-#questions .container .question .faq .faq-item .faq-header:hover {
+#faqs .container .question .faq .faq-item .faq-header:hover {
   background-color: #F7FAFD;
   padding-left: 10px;
 }
 
-#questions .container .question .faq .faq-item .faq-content {
+#faqs .container .question .faq .faq-item .faq-content {
   max-height: 0;
   -webkit-transition: max-height 0.3s ease;
   transition: max-height 0.3s ease;
   overflow: hidden;
 }
 
-#questions .container .question .faq .faq-item .faq-content .content-wrap {
+#faqs .container .question .faq .faq-item .faq-content .content-wrap {
   padding: 30px;
   padding-left: 35px;
   padding-bottom: 16px;
   border-bottom: 1px solid #F7FAFD;
 }
 
-#questions .container .question .faq .faq-item .faq-content .content-wrap p {
+#faqs .container .question .faq .faq-item .faq-content .content-wrap p {
   font-weight: 400;
   font-size: 0.875rem;
   color: #6F8BA4;
@@ -1135,12 +1174,14 @@ header nav .collapse form .sign-up:hover {
   letter-spacing: 0.88px;
 }
 
-#questions .container .question .faq .faq-item .faq-content.show {
+#faqs .container .question .faq .faq-item .faq-content.show {
   -webkit-transition: max-height 0.3s ease;
   transition: max-height 0.3s ease;
   max-height: 220px;
 }
 
+/* faqs section ends */
+/* blog-section start */
 #blogs {
   background-color: #F7FAFD;
 }
@@ -1149,6 +1190,10 @@ header nav .collapse form .sign-up:hover {
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
+  /* blogs start */
+  /* blogs end */
+  /* blogs additions start */
+  /* blogs additions end */
 }
 
 #blogs .container .blog-area {
@@ -1157,6 +1202,11 @@ header nav .collapse form .sign-up:hover {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+#blogs .container .blog-area .blog {
+  /* blog item start */
+  /* blog item end */
 }
 
 #blogs .container .blog-area .blog .blog-item {
@@ -1511,6 +1561,8 @@ header nav .collapse form .sign-up:hover {
   background-color: #F7FAFD;
 }
 
+/* blog-section end */
+/* main button properties start */
 .main-button {
   background-color: #585CE9;
   border-radius: 5px;
@@ -1519,8 +1571,8 @@ header nav .collapse form .sign-up:hover {
   line-height: 2.75rem;
   cursor: pointer;
   outline: none;
-  -webkit-transition: all .3s ease-in;
-  transition: all .3s ease-in;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
   font-size: 0.75rem;
   letter-spacing: 0.75px;
   text-transform: uppercase;
@@ -1533,6 +1585,8 @@ header nav .collapse form .sign-up:hover {
   background-color: #4146e6;
 }
 
+/* main button properties end */
+/* main cloud sections' properties start */
 .cloud-main {
   background-color: #F7FAFD;
 }
@@ -1541,6 +1595,8 @@ header nav .collapse form .sign-up:hover {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  /* cloud services start */
+  /* cloud services end */
 }
 
 .cloud-main .container .cloud-services .services {
@@ -1552,6 +1608,10 @@ header nav .collapse form .sign-up:hover {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  /* service item starts */
+  /* service item starts */
+  /* active service item */
+  /* active service item ends */
 }
 
 .cloud-main .container .cloud-services .services .service {
@@ -1674,6 +1734,8 @@ header nav .collapse form .sign-up:hover {
      object-fit: cover;
 }
 
+/* main cloud sections' properties end */
+/* main parallax properties start */
 .parallax-main {
   position: relative;
   min-height: 315px;
@@ -1703,6 +1765,8 @@ header nav .collapse form .sign-up:hover {
   z-index: 2;
 }
 
+/* main parallax properties start */
+/* page-head parallax start */
 .parallax-page-head {
   min-height: 270px;
 }
@@ -1755,6 +1819,8 @@ header nav .collapse form .sign-up:hover {
   margin: 0 10px;
 }
 
+/* page-head parallax ends */
+/* main services section properties start */
 .services-main {
   background-color: #FFF;
 }
@@ -1841,4 +1907,6 @@ header nav .collapse form .sign-up:hover {
 .services-main .content .service .details:hover .features-desc {
   color: #FFF;
 }
+
+/* main services section properties end */
 /*# sourceMappingURL=main.css.map */

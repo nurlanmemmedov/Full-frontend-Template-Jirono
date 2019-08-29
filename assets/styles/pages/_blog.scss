@@ -1,11 +1,14 @@
+/* blog-section start */
 #blogs{
     background-color: $color-lightest-gray;
     .container{
         align-items: stretch;
+        /* blogs start */
         .blog-area{
             display: flex;
             flex-wrap: wrap;
         .blog{
+            /* blog item start */
             .blog-item{
                 margin-bottom: 30px;
                 background-color: $color-white;
@@ -93,6 +96,7 @@
                     }
                 }
             }
+            /* blog item end */
         }
         .blog-small{
             .blog-image{
@@ -137,6 +141,8 @@
             }
     }
     }
+        /* blogs end */
+        /* blogs additions start */
     .additions{
         .search{
             margin-bottom: 30px;
@@ -177,7 +183,6 @@
                 box-shadow: $main-shadow;
                 border-radius: $main-radius;
                 background-color: $color-white;
-                // padding: 0 !important; 
                 padding: 0;
                 width: 100%;
                 margin-bottom: 30px;
@@ -302,5 +307,7 @@
             }
         }
     }
+        /* blogs additions end */
     }
 }
+/* blog-section end */

@@ -1,3 +1,4 @@
+/* main parallax properties start */
 .parallax-main{
     position: relative;
     min-height: 315px;
@@ -19,6 +20,8 @@
         z-index:2;
     }
 }
+/* main parallax properties start */
+/* page-head parallax start */
 .parallax-page-head{
     min-height: 270px;
     .container{
@@ -63,3 +66,4 @@
     }
 }
 }
+/* page-head parallax ends */

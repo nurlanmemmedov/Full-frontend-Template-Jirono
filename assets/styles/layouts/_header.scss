@@ -1,12 +1,4 @@
-.sticky{
-    box-shadow: $main-shadow !important;
-    background-color: $color-white !important;
-    position: fixed !important;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 9999;
-   }
+/* header starts */ 
 header{
     position: fixed;
     top: 0;
@@ -16,7 +8,6 @@ header{
     height: 80px;
     background: transparent;
     z-index: 9999;
-  
     nav{
         padding-top: 20px !important;
         padding-bottom: 20px !important;
@@ -48,7 +39,6 @@ header{
                
                 margin-top: 4px;
               }
-        
         }
         .navbar-toggler.coll{
             .icon-bar {
@@ -67,6 +57,7 @@ header{
               }
         }
         .collapse{
+            /* menu starts */
             ul{
                 margin-left: 60px;
                 
@@ -140,6 +131,7 @@ header{
                     }
                 }
             }
+            /* menu ends */
             form{
                 button{
                     line-height: $line-height * 2;
@@ -167,6 +159,13 @@ header{
         }
     }
 }
+/* header ends */ 
+/* backcolor white header */
+.white{
+    box-shadow: $main-shadow !important;
+    background-color: $color-white !important;
+   }
+/* colored header */
 .colorfull{
     background-color: $color-white;
 }

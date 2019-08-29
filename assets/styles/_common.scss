@@ -1,3 +1,4 @@
+/* body properties */
 body{
     font-family: $main-font;
     font-size: $font-size;
@@ -7,9 +8,11 @@ body{
     color: $color-body;
     line-height: $line-height * 1.75;
 }
+/* common a tags */
 a{
     text-decoration: none !important;
 }
+/* common parallaxes */
 .parallax{
     position: fixed;
     top: 0;
@@ -20,6 +23,7 @@ a{
     background-position: center;
     background-size: cover;
 }
+/* common container properties */
 .container{
     padding: 0;
    display: flex;
@@ -27,6 +31,7 @@ a{
    justify-content: center;
    flex-wrap: wrap;
 }
+/* sections head title starts */
 .head{
     padding-bottom: 18px;
     text-align: center;
@@ -46,13 +51,16 @@ a{
     margin-bottom: 40px;
     font-weight: 400;
 }
+/* sections head title ends */
+/* common sections' top padding */
 .section-top{
     padding-top: $section-p-top;
 }
+/* common sections' bottom padding */
 .section-bottom{
     padding-bottom: $section-p-bottom;
 }
-
+/* when screen is medium */
 @media screen and (max-width: 995px) {
     .mobile-bottom{
         margin-bottom: 30px;
@@ -131,6 +139,7 @@ a{
         }
     }
   }
+  /* common main's margin from header */
   .margin-from-header{
       margin-top: 80px;
   }

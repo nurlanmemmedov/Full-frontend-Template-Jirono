@@ -1,3 +1,4 @@
+/* welcome area properties start */
 .welcome{
     background-color: $color-white;
     position: relative;
@@ -109,13 +110,15 @@
         }
     }
 }
-
-#cloud-reverse{
+/* welcome area properties end */
+/* developmennt services section start */
+#development-services{
     background-color: $color-white !important;
 }
+/* developmennt services section end */
+/* parallax section starts */
 #parallax{
     padding: 60px 0;
-    }
     .container{
         .count{
             display: flex;
@@ -144,6 +147,9 @@
             }
         }
 }
+}
+/* parallax section ends */
+/* our team section starts */
 #our-team{
     background-color: $color-white;
     .container{
@@ -258,6 +264,8 @@
         }
     }
 }
+/* our team section ends */
+/* pricing section starts */
 #pricing{
     background-color: $color-lightest-gray;
     .container{
@@ -361,6 +369,8 @@
     }
 }
 }
+/* pricing section ends */
+/* parallax contact section starts */
 #parallax-contact{
     padding-top: 80px;
     padding-bottom: 80px;
@@ -388,6 +398,8 @@
         }
     }
 }
+/* parallax contact section ends */
+/* latest blogs section starts */
 #latest-blogs{
     background-color: $color-white;
     .container{
@@ -444,3 +456,4 @@
         }
     }
 }
+/* latest blogs section ends */

@@ -1,9 +1,14 @@
+/* parallax 2nd image starts*/
 .parallax-2nd{
     z-index: -3 ;
 }
+/* parallax 2nd image ends*/
+/* services section at about page start */
 #services-about{
     background-color: $color-light-gray;
 }
+/* services section at about page end */
+/* mission sections main properties start */
 .mission-main{
     background-color: $color-light-gray;
     padding-bottom: 100px;
@@ -59,7 +64,9 @@
         }
     }
 }
-#mission-2{
+/* mission sections main properties end */
+/* vision section starts */
+#vision{
     .container{
     .text-mission{
         left: 0 !important;
@@ -69,3 +76,5 @@
     }
 }
 }
+/* vision section ends */
+

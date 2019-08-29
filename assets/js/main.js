@@ -2,9 +2,9 @@ $(document).ready(function () {
     // for the display of header
     function header() {
         if ($(document).scrollTop() > 0) {
-            $('header').addClass('sticky')
+            $('header').addClass('white')
         } else {
-            $('header').removeClass('sticky');
+            $('header').removeClass('white');
         }
     }
     header();
@@ -74,16 +74,6 @@ $(document).ready(function () {
     })
 
     //to make the faq content appear
-    // for(let i=0; i<$('.faq-header').length; i++){
-    //     $('.faq-header')[i].click(()=>{
-    //         $('.faq-content')[i].toggleClass('show');
-    //     })
-    // }
-    // $('.faq-header').click(()=>{
-    //     $('.faq-content').toggleClass('show');
-    // })
-
-
     $('.faq-header').each(function(index,item){
         $('.faq-header').eq(index).click(()=>{
             $('.faq-content').not(':eq('+index +')').removeClass('show');
