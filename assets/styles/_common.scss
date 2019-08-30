@@ -76,13 +76,21 @@ a{
             transition: none !important;
                 margin-left: 0 !important;
                 li{
-                    transition: none !important;
+                    margin: 0 !important;
+                    transition: $main-transition;
                     border-bottom: 1px solid $color-light-gray;
-                   line-height: $line-height *3.125;
                    a{
-                   &:hover{
-                       background-color: $color-light-gray;
-                   }
+                   height: 50px !important;
+                   line-height: $line-height * 3.125;
+                   color: $color-light-black !important; 
+                   padding-left: 30px !important;
+                   line-height: $line-height * 3.125 !important;
+                   i{
+                    left: 96% !important;
+                }
+                }
+                &:hover{
+                    background-color: $color-light-gray;
                 }
                 }
                 .dropdown{
@@ -101,10 +109,12 @@ a{
                         width: 100%;
                         font-size: $font-size * 0.875;
                         border-bottom: 1px solid $color-light-gray;
-                       line-height: $line-height *3;
                        padding-left: 50px !important;
+                       height: 50px !important;
+                       line-height: $line-height * 3.125 !important;
                        &:hover{
                         background-color: $color-light-gray;
+                        padding-left: 50px !important;
                        }
                        &:hover::before{
                         width: 0;
@@ -136,6 +146,11 @@ a{
             width: 100% !important;
             transform: translateY(0%) !important;
             margin-bottom: 30px;
+        }
+    }
+    .parallax-page-head{
+        h1{
+            font-size: 26px !important;
         }
     }
   }

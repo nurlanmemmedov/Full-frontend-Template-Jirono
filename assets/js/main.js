@@ -83,10 +83,4 @@ $(document).ready(function () {
         })
      });
 
-
-
-
-
-
-
 });

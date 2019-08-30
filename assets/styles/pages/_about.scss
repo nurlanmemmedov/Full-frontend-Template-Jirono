@@ -13,6 +13,7 @@
     background-color: $color-light-gray;
     padding-bottom: 100px;
     .container{
+        padding: 0 15px !important;
         position: relative;
         justify-content: space-between;
         .image-mission{
@@ -38,7 +39,7 @@
             width: 40%;
             position: absolute;
             z-index:2;
-            right: 0;
+            right: 15px;
             top: 50%;
             transform: translateY(-50%);
             border-radius: $main-radius;
@@ -69,7 +70,7 @@
 #vision{
     .container{
     .text-mission{
-        left: 0 !important;
+        left: 15px !important;
     }
     .image-mission{
         margin-left: auto;
