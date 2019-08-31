@@ -1180,8 +1180,8 @@
     HEIGHT: 'height'
   };
   var Selector$3 = {
-    ACTIVES: '.show, .collapsing',
-    DATA_TOGGLE: '[data-toggle="collapse"]'
+    ACTIVES: '.show',
+    // DATA_TOGGLE: '[data-toggle="collapse"]'
     /**
      * ------------------------------------------------------------------------
      * Class Definition

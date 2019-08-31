@@ -89,46 +89,46 @@ a {
     -webkit-box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.06) !important;
             box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.06) !important;
   }
-  header .collapse.show {
-    height: 224px;
-    -webkit-transition: all .6s linear;
-    transition: all .6s linear;
+  header .collapse.showing {
+    height: 204px;
+    -webkit-transition: all .4s;
+    transition: all .4s;
   }
-  header .collapsing {
+  header .nav-coll.collapsing {
     display: none !important;
   }
-  header .collapse {
+  header .nav-coll {
     background-color: #FFF !important;
     display: block !important;
     height: 0px;
     overflow: hidden;
-    -webkit-transition: all .6s linear;
-    transition: all .6s linear;
+    -webkit-transition: all .4s;
+    transition: all .4s;
+    margin-top: 22px;
   }
-  header .collapse ul {
-    margin-top: 20px;
+  header .nav-coll ul {
     margin-left: 0 !important;
   }
-  header .collapse ul li {
+  header .nav-coll ul li {
     margin: 0 !important;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
     border-bottom: 1px solid #f5f5f5;
   }
-  header .collapse ul li a {
+  header .nav-coll ul li a {
     height: 50px !important;
     color: #3B566E !important;
     padding-left: 30px !important;
     line-height: 3.125rem !important;
     background-color: #FFF;
   }
-  header .collapse ul li a i {
+  header .nav-coll ul li a i {
     left: 96% !important;
   }
-  header .collapse ul li:hover {
+  header .nav-coll ul li:hover {
     background-color: #f5f5f5;
   }
-  header .collapse ul .dropdown .dropdown-menu {
+  header .nav-coll ul .dropdown .dropdown-menu {
     opacity: 1 !important;
     visibility: visible !important;
     -webkit-transform: translateY(0) !important;
@@ -137,12 +137,12 @@ a {
     -webkit-box-shadow: none !important;
             box-shadow: none !important;
   }
-  header .collapse ul .dropdown .dropdown-menu.show {
+  header .nav-coll ul .dropdown .dropdown-menu.show {
     display: block !important;
     margin: 0 !important;
     width: 100%;
   }
-  header .collapse ul .dropdown .dropdown-menu.show a {
+  header .nav-coll ul .dropdown .dropdown-menu.show a {
     width: 100%;
     font-size: 0.875rem;
     border-bottom: 1px solid #f5f5f5;
@@ -150,16 +150,15 @@ a {
     height: 50px !important;
     line-height: 3.125rem !important;
   }
-  header .collapse ul .dropdown .dropdown-menu.show a:hover {
+  header .nav-coll ul .dropdown .dropdown-menu.show a:hover {
     background-color: #f5f5f5;
     padding-left: 50px !important;
   }
-  header .collapse ul .dropdown .dropdown-menu.show a:hover::before {
+  header .nav-coll ul .dropdown .dropdown-menu.show a:hover::before {
     width: 0;
   }
-  header .collapse form {
-    -webkit-transition: none !important;
-    transition: none !important;
+  header .nav-coll form {
+    display: none;
   }
   .responsive-center {
     text-align: center;
@@ -283,105 +282,109 @@ header {
   right: 0;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  height: 80px;
+  height: 100px;
   background: transparent;
   z-index: 9999;
 }
 
-header nav {
-  padding-top: 20px !important;
-  padding-bottom: 20px !important;
+header .container {
+  padding: 0 15px !important;
+}
+
+header .container nav {
+  padding: 0 !important;
+  margin-top: 33px;
   z-index: 9999;
   width: 100%;
 }
 
-header nav .navbar-toggler {
+header .container nav .navbar-toggler {
   border: none;
   background: transparent !important;
   outline: 0;
 }
 
-header nav .navbar-toggler .icon-bar {
+header .container nav .navbar-toggler .icon-bar {
   width: 22px;
   height: 2px;
   background-color: black;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
 }
 
-header nav .navbar-toggler .top-bar {
+header .container nav .navbar-toggler .top-bar {
   margin-bottom: 4px;
 }
 
-header nav .navbar-toggler .middle-bar {
+header .container nav .navbar-toggler .middle-bar {
   width: 32px;
 }
 
-header nav .navbar-toggler .bottom-bar {
+header .container nav .navbar-toggler .bottom-bar {
   margin-top: 4px;
 }
 
-header nav .navbar-toggler.coll .icon-bar {
+header .container nav .navbar-toggler.coll .icon-bar {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
 
-header nav .navbar-toggler.coll .top-bar {
+header .container nav .navbar-toggler.coll .top-bar {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   -webkit-transform-origin: 10% 10%;
           transform-origin: 10% 10%;
 }
 
-header nav .navbar-toggler.coll .middle-bar {
+header .container nav .navbar-toggler.coll .middle-bar {
   opacity: 0;
 }
 
-header nav .navbar-toggler.coll .bottom-bar {
+header .container nav .navbar-toggler.coll .bottom-bar {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
   -webkit-transform-origin: 10% 90%;
           transform-origin: 10% 90%;
 }
 
-header nav .collapse {
+header .container nav .nav-coll {
   /* menu starts */
   /* menu ends */
 }
 
-header nav .collapse a {
+header .container nav .nav-coll a {
   padding-top: 0px !important;
   padding-bottom: 0px !important;
 }
 
-header nav .collapse ul {
+header .container nav .nav-coll ul {
   margin-left: 60px;
 }
 
-header nav .collapse ul li {
+header .container nav .nav-coll ul li {
   margin: 0 10px;
 }
 
-header nav .collapse ul li a {
+header .container nav .nav-coll ul li a {
   color: #6F8BA4 !important;
   font-size: 0.875rem;
   font-weight: 600;
 }
 
-header nav .collapse ul li a:hover {
+header .container nav .nav-coll ul li a:hover {
   color: #6F8BA4 !important;
 }
 
-header nav .collapse ul .dropdown .dropdown-toggle {
+header .container nav .nav-coll ul .dropdown .dropdown-toggle {
   padding-right: 23px !important;
   position: relative;
 }
 
-header nav .collapse ul .dropdown .dropdown-toggle::after {
+header .container nav .nav-coll ul .dropdown .dropdown-toggle::after {
   display: none;
 }
 
-header nav .collapse ul .dropdown .dropdown-toggle i {
+header .container nav .nav-coll ul .dropdown .dropdown-toggle i {
   position: absolute;
   content: "";
   top: 41%;
@@ -389,7 +392,7 @@ header nav .collapse ul .dropdown .dropdown-toggle i {
   font-size: 8px;
 }
 
-header nav .collapse ul .dropdown .dropdown-menu {
+header .container nav .nav-coll ul .dropdown .dropdown-menu {
   margin-left: 15px;
   width: 200px;
   padding: 0;
@@ -407,7 +410,7 @@ header nav .collapse ul .dropdown .dropdown-menu {
           transform: translateY(-2em);
 }
 
-header nav .collapse ul .dropdown .dropdown-menu a {
+header .container nav .nav-coll ul .dropdown .dropdown-menu a {
   padding-left: 20px;
   line-height: 2.5rem;
   font-size: 0.8125rem;
@@ -418,7 +421,7 @@ header nav .collapse ul .dropdown .dropdown-menu a {
   position: relative;
 }
 
-header nav .collapse ul .dropdown .dropdown-menu a::before {
+header .container nav .nav-coll ul .dropdown .dropdown-menu a::before {
   position: absolute;
   content: "";
   top: 0;
@@ -430,23 +433,23 @@ header nav .collapse ul .dropdown .dropdown-menu a::before {
   transition: all 0.3s ease;
 }
 
-header nav .collapse ul .dropdown .dropdown-menu a:hover::before {
+header .container nav .nav-coll ul .dropdown .dropdown-menu a:hover::before {
   width: 3px;
 }
 
-header nav .collapse ul .dropdown .dropdown-menu a:hover {
+header .container nav .nav-coll ul .dropdown .dropdown-menu a:hover {
   background-color: #f5f5f5;
   padding-left: 25px !important;
 }
 
-header nav .collapse ul .dropdown:hover .dropdown-menu {
+header .container nav .nav-coll ul .dropdown:hover .dropdown-menu {
   visibility: visible;
   opacity: 1;
   -webkit-transform: translateY(0);
           transform: translateY(0);
 }
 
-header nav .collapse form button {
+header .container nav .nav-coll form button {
   line-height: 2rem;
   padding: 0 25px;
   margin-left: 15px;
@@ -455,17 +458,17 @@ header nav .collapse form button {
   height: 32px;
 }
 
-header nav .collapse form .sign-in {
+header .container nav .nav-coll form .sign-in {
   background-color: transparent;
   color: #585CE9;
 }
 
-header nav .collapse form .sign-in:hover {
+header .container nav .nav-coll form .sign-in:hover {
   color: #FFF;
   background-color: #585CE9;
 }
 
-header nav .collapse form .sign-up:hover {
+header .container nav .nav-coll form .sign-up:hover {
   color: #585CE9;
   background-color: transparent;
 }
@@ -473,14 +476,24 @@ header nav .collapse form .sign-up:hover {
 /* header ends */
 /* backcolor white header */
 .white {
-  -webkit-box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.06) !important;
-          box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.06) !important;
-  background-color: #FFF !important;
+  -webkit-box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.06);
+          box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.06);
+  background-color: #FFF;
+  height: 80px;
+}
+
+.white nav {
+  margin-top: 23px !important;
 }
 
 /* colored header */
 .colorfull {
   background-color: #FFF;
+  height: 80px !important;
+}
+
+.colorfull nav {
+  margin-top: 23px !important;
 }
 
 /* welcome area properties start */

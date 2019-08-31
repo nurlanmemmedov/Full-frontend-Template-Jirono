@@ -69,21 +69,21 @@ a{
         background-color: $color-white !important;
         transition: none !important;
         box-shadow: 0 2px 28px 0  rgba(0, 0, 0, 0.06) !important;
-        .collapse.show{
-            height: 224px;
-            transition: all .6s linear;
+        .collapse.showing{
+            height: 204px;
+            transition: all .4s;
         }
-        .collapsing{
+        .nav-coll.collapsing{
             display: none !important;
         }
-        .collapse{
+        .nav-coll{
             background-color: $color-white !important;
             display: block !important;
             height: 0px;
             overflow: hidden;
-            transition: all .6s linear;
+            transition: all .4s;
+            margin-top: 22px;
             ul{
-            margin-top: 20px;
                 margin-left: 0 !important;
                 li{
                     margin: 0 !important;
@@ -136,8 +136,7 @@ a{
             }
             }
             form{
-                transition: none !important;
-                
+                display: none;
             }
         }
     }

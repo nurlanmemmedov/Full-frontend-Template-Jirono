@@ -18,7 +18,7 @@ $(document).ready(function () {
     //responsive header's opening
     $('.navbar-toggler').click(() => {
         $('.navbar-toggler').toggleClass('coll');
-        $('form').css('display', 'none')
+        $('.nav-coll').toggleClass('showing');
     })
     //#endregion
     
