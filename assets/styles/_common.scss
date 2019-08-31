@@ -69,11 +69,21 @@ a{
         background-color: $color-white !important;
         transition: none !important;
         box-shadow: 0 2px 28px 0  rgba(0, 0, 0, 0.06) !important;
+        .collapse.show{
+            height: 224px;
+            transition: all .6s linear;
+        }
+        .collapsing{
+            display: none !important;
+        }
         .collapse{
-            background-color: $color-white;
+            background-color: $color-white !important;
+            display: block !important;
+            height: 0px;
+            overflow: hidden;
+            transition: all .6s linear;
             ul{
             margin-top: 20px;
-            transition: none !important;
                 margin-left: 0 !important;
                 li{
                     margin: 0 !important;
@@ -81,10 +91,10 @@ a{
                     border-bottom: 1px solid $color-light-gray;
                    a{
                    height: 50px !important;
-                   line-height: $line-height * 3.125;
                    color: $color-light-black !important; 
                    padding-left: 30px !important;
                    line-height: $line-height * 3.125 !important;
+                   background-color: $color-white;
                    i{
                     left: 96% !important;
                 }
@@ -151,6 +161,12 @@ a{
     .parallax-page-head{
         h1{
             font-size: 26px !important;
+        }
+    }
+    #contact-area{
+        .contact-info{
+            margin-top: 30px !important;
+            width: 100% !important;
         }
     }
   }

@@ -280,6 +280,9 @@
         align-items: center;
         flex-wrap: wrap;
         .plan{
+            transform: translateY(80px);
+            transition: $transition-scroll-effect;
+            opacity: 0;
             .pricing-item{
                 margin-bottom: 30px;
                 overflow: hidden;

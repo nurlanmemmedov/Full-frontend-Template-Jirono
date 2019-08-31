@@ -114,8 +114,13 @@
         .image-area{
             .image{
                 text-align: center;
+                transform: translateX(-50px);
+                opacity: 0;
+                transition: $transition-scroll-effect;
                 img{
                     object-fit: cover;
+                    width: 100%;
+                    height: 100%;
                 }
             }
         }

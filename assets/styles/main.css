@@ -89,13 +89,24 @@ a {
     -webkit-box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.06) !important;
             box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.06) !important;
   }
+  header .collapse.show {
+    height: 224px;
+    -webkit-transition: all .6s linear;
+    transition: all .6s linear;
+  }
+  header .collapsing {
+    display: none !important;
+  }
   header .collapse {
-    background-color: #FFF;
+    background-color: #FFF !important;
+    display: block !important;
+    height: 0px;
+    overflow: hidden;
+    -webkit-transition: all .6s linear;
+    transition: all .6s linear;
   }
   header .collapse ul {
     margin-top: 20px;
-    -webkit-transition: none !important;
-    transition: none !important;
     margin-left: 0 !important;
   }
   header .collapse ul li {
@@ -106,10 +117,10 @@ a {
   }
   header .collapse ul li a {
     height: 50px !important;
-    line-height: 3.125rem;
     color: #3B566E !important;
     padding-left: 30px !important;
     line-height: 3.125rem !important;
+    background-color: #FFF;
   }
   header .collapse ul li a i {
     left: 96% !important;
@@ -168,6 +179,10 @@ a {
   }
   .parallax-page-head h1 {
     font-size: 26px !important;
+  }
+  #contact-area .contact-info {
+    margin-top: 30px !important;
+    width: 100% !important;
   }
 }
 
@@ -814,6 +829,14 @@ header nav .collapse form .sign-up:hover {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+#pricing .container .content .plan {
+  -webkit-transform: translateY(80px);
+          transform: translateY(80px);
+  -webkit-transition: all 0.6s ease-in;
+  transition: all 0.6s ease-in;
+  opacity: 0;
 }
 
 #pricing .container .content .plan .pricing-item {
@@ -1859,6 +1882,138 @@ header nav .collapse form .sign-up:hover {
 }
 
 /* blog-single page ends */
+#contact-area {
+  font-weight: 300;
+  background-color: #F7FAFD;
+  padding-bottom: 60px;
+}
+
+#contact-area .map-wrap {
+  position: relative;
+  z-index: 1;
+  border-radius: 5px;
+  overflow: hidden;
+  height: 500px;
+}
+
+#contact-area .contact-info {
+  width: 90%;
+  margin-top: -90px;
+  background-image: linear-gradient(135deg, #585CE9 0%, #5C83E3 100%);
+  -webkit-box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
+          box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
+  border-radius: 5px;
+  padding: 30px;
+  padding-bottom: 10px;
+  position: relative;
+  z-index: 2;
+  color: #FFF;
+}
+
+#contact-area .contact-info .row .info-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#contact-area .contact-info .row .info-item i {
+  width: 20px;
+  margin-right: 10px;
+  margin-top: 5px;
+}
+
+#contact-area .contact-info .row .info-item .text {
+  font-size: 0.875rem;
+}
+
+#contact-area .contact-info .icons ul {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  padding: 0 !important;
+}
+
+#contact-area .contact-info .icons ul li {
+  margin: 0 7px;
+}
+
+#contact-area .contact-info .icons ul li a {
+  color: #FFF;
+}
+
+#contact-area .contact-info .icons ul li a i {
+  font-size: 21px;
+}
+
+#contact-us {
+  padding-bottom: 100px;
+  padding-top: 60px;
+  border-top: 1px solid #f5f5f5;
+  color: #6F8BA4;
+  font-weight: 300;
+  background-color: #F7FAFD;
+}
+
+#contact-us .container {
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+#contact-us .container .description h5 {
+  margin-bottom: 30px !important;
+}
+
+#contact-us .container .description .text {
+  font-size: 0.875rem;
+}
+
+#contact-us .container .description .text p {
+  margin-bottom: 28px;
+}
+
+#contact-us .container .contact-message form {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#contact-us .container .contact-message form .input .comment-input {
+  width: 100%;
+  border: 1px solid #eee;
+  height: 50px;
+  outline: none;
+  padding-left: 20px;
+  padding-right: 20px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+
+#contact-us .container .contact-message form .input .comment-input:focus {
+  border: 1px solid #585CE9;
+  padding-left: 25px;
+}
+
+#contact-us .container .contact-message form .input textarea {
+  resize: none;
+  height: 150px !important;
+  padding: 20px;
+}
+
 /* main button properties start */
 .main-button {
   background-color: #585CE9;
@@ -2024,11 +2179,18 @@ header nav .collapse form .sign-up:hover {
 
 .cloud-main .container .image-area .image {
   text-align: center;
+  -webkit-transform: translateX(-50px);
+          transform: translateX(-50px);
+  opacity: 0;
+  -webkit-transition: all 0.6s ease-in;
+  transition: all 0.6s ease-in;
 }
 
 .cloud-main .container .image-area .image img {
   -o-object-fit: cover;
      object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
 /* main cloud sections' properties end */
@@ -2136,6 +2298,14 @@ header nav .collapse form .sign-up:hover {
       flex-wrap: wrap;
 }
 
+.services-main .content .service {
+  -webkit-transform: translateY(80px);
+          transform: translateY(80px);
+  opacity: 0;
+  -webkit-transition: all 0.6s ease-in;
+  transition: all 0.6s ease-in;
+}
+
 .services-main .content .service .details {
   padding: 30px;
   display: block;
@@ -2205,4 +2375,127 @@ header nav .collapse form .sign-up:hover {
 }
 
 /* main services section properties end */
+/* loader starts */
+.loader {
+  overflow: hidden;
+  background-image: linear-gradient(135deg, #585CE9 0%, #5C83E3 100%);
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: fixed;
+  z-index: 999999;
+}
+
+.loader .loader-spin {
+  position: absolute;
+  top: calc(50% - 20px);
+  left: calc(50% - 20px);
+}
+
+.loader .loader-spin .square {
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  -webkit-animation: animate .5s linear infinite;
+          animation: animate .5s linear infinite;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 3px;
+}
+
+.loader .loader-spin .shadow {
+  width: 50px;
+  height: 5px;
+  background: #000;
+  opacity: 0.1;
+  position: absolute;
+  top: 59px;
+  left: 0;
+  border-radius: 50%;
+  -webkit-animation: shadow .5s linear infinite;
+          animation: shadow .5s linear infinite;
+}
+
+/* loader ends */
+/* loader animations start */
+@-webkit-keyframes loader {
+  0% {
+    left: -100px;
+  }
+  100% {
+    left: 110%;
+  }
+}
+@keyframes loader {
+  0% {
+    left: -100px;
+  }
+  100% {
+    left: 110%;
+  }
+}
+
+@-webkit-keyframes animate {
+  17% {
+    border-bottom-right-radius: 3px;
+  }
+  25% {
+    -webkit-transform: translateY(9px) rotate(22.5deg);
+            transform: translateY(9px) rotate(22.5deg);
+  }
+  50% {
+    -webkit-transform: translateY(18px) scale(1, 0.9) rotate(45deg);
+            transform: translateY(18px) scale(1, 0.9) rotate(45deg);
+    border-bottom-right-radius: 40px;
+  }
+  75% {
+    -webkit-transform: translateY(9px) rotate(67.5deg);
+            transform: translateY(9px) rotate(67.5deg);
+  }
+  100% {
+    -webkit-transform: translateY(0) rotate(90deg);
+            transform: translateY(0) rotate(90deg);
+  }
+}
+
+@keyframes animate {
+  17% {
+    border-bottom-right-radius: 3px;
+  }
+  25% {
+    -webkit-transform: translateY(9px) rotate(22.5deg);
+            transform: translateY(9px) rotate(22.5deg);
+  }
+  50% {
+    -webkit-transform: translateY(18px) scale(1, 0.9) rotate(45deg);
+            transform: translateY(18px) scale(1, 0.9) rotate(45deg);
+    border-bottom-right-radius: 40px;
+  }
+  75% {
+    -webkit-transform: translateY(9px) rotate(67.5deg);
+            transform: translateY(9px) rotate(67.5deg);
+  }
+  100% {
+    -webkit-transform: translateY(0) rotate(90deg);
+            transform: translateY(0) rotate(90deg);
+  }
+}
+
+@-webkit-keyframes shadow {
+  50% {
+    -webkit-transform: scale(1.2, 1);
+            transform: scale(1.2, 1);
+  }
+}
+
+@keyframes shadow {
+  50% {
+    -webkit-transform: scale(1.2, 1);
+            transform: scale(1.2, 1);
+  }
+}
+
+/* loader animations end */
 /*# sourceMappingURL=main.css.map */

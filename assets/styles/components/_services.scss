@@ -8,6 +8,9 @@
         justify-content: center;
         flex-wrap: wrap;
     .service{
+        transform: translateY(80px);
+        opacity: 0;
+        transition: $transition-scroll-effect;
         .details{
             padding: 30px;
             display: block;
