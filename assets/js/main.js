@@ -1,4 +1,50 @@
 $(document).ready(function () {
+    $('.loader').fadeOut('slow')
+    //#region carousel
+    //owl-carousel options
+    if ($('.owl-carousel').length) {
+        $(".owl-carousel").owlCarousel({
+            items: 1,
+            loop: true,
+            nav: true,
+            mouseDrag: false,
+            touchDrag: false,
+            animateOut: 'fadeOut',
+            animateIn: 'fadeIn',
+            navText: ["<i class='fas fa-caret-left'></i>", "<i class='fas fa-caret-right'></i>"],
+            0: {
+                items: 1
+            },
+            480: {
+                items: 1
+            },
+            769: {
+                items: 1
+            }
+        });
+    }
+    //when click image, carousel appear
+    $('.image-popup').on('click', () => {
+        $('.owl-carousel').fadeIn('slow');
+        $('body').addClass('overflow');
+    })
+    //when click close button, carousel disappear
+    $('.close-button').on('click', () => {
+        $('.owl-carousel').fadeOut('slow');
+        $('body').removeClass('overflow');
+
+    })
+    //when click anywhere except slides , carousel disappear
+    $('.owl-item').on('click', function (e) {
+        $('.owl-carousel').fadeOut('slow');
+        $('body').removeClass('overflow');
+    });
+
+    $('.owl-item div').on('click', function (e) {
+        e.stopPropagation();
+    });
+    //#endregion
+
     //#region header
     // for the display of header
     function header() {
@@ -21,28 +67,40 @@ $(document).ready(function () {
         $('.nav-coll').toggleClass('showing');
     })
     //#endregion
-    
+
     //#region auto-scroll
     //auto scroll when clicking navbar
     //scroll to cloud-services section
     $('.features-button').click(() => {
+        $('.navbar-toggler').removeClass('coll');
+        $('.nav-coll').removeClass('showing');
         $('html').animate({ scrollTop: $('#cloud-services').offset().top }, 700);
         return false;
+
     })
     //scroll to our-team section
     $('.team-button').click(() => {
+        $('.navbar-toggler').removeClass('coll');
+        $('.nav-coll').removeClass('showing');
         $('html').animate({ scrollTop: $('#our-team').offset().top }, 700);
         return false;
+
     })
     //scroll to  pricing section
     $('.pricing-button').click(() => {
+        $('.navbar-toggler').removeClass('coll');
+        $('.nav-coll').removeClass('showing');
         $('html').animate({ scrollTop: $('#pricing').offset().top }, 700);
         return false;
+
     })
     //scroll to latest-blogs section
     $('.blogs-button').click(() => {
+        $('.navbar-toggler').removeClass('coll');
+        $('.nav-coll').removeClass('showing');
         $('html').animate({ scrollTop: $('#latest-blogs').offset().top }, 700);
         return false;
+
     })
     //#endregion
 
@@ -67,16 +125,18 @@ $(document).ready(function () {
     //count up if section seems on window
     function view() {
         if ($('#parallax').length) {
-            const viewTop = $(document).scrollTop();
-            const viewBottom = viewTop + $(window).height()
-            const sectionTop = $('#parallax').offset().top;
-            const sectionBottom = sectionTop + $('#parallax').height();
-            if (viewTop < sectionTop && viewBottom > sectionBottom) {
-                if (!isScrolled) {
-                    counter();
-                    isScrolled = true;
+            $('#parallax .count').each((index) => {
+                const viewTop = $(document).scrollTop();
+                const viewBottom = viewTop + $(window).height()
+                const sectionTop = $('#parallax .count').eq(index).offset().top;
+                const sectionBottom = sectionTop + $('#parallax .count').eq(index).height();
+                if (viewTop < sectionTop && viewBottom > sectionTop) {
+                    if (!isScrolled) {
+                        counter();
+                        isScrolled = true;
+                    }
                 }
-            }
+            })
         }
     }
     //count up when scroll
@@ -114,67 +174,62 @@ $(document).ready(function () {
 
     //#region scroll effects
     //effects when scroll down
-    $(document).scroll(() => {
+    function scrollDown() {
         if ($('.services-main').length) {
-            const viewTop = $(document).scrollTop();
-            const viewBottom = viewTop + $(window).height()
-            const sectionTop = $('.services-main ').offset().top;
-            const sectionBottom = sectionTop + $('.services-main').height();
-            if (viewTop < sectionTop && viewBottom > sectionBottom) {
-                $('.services-main .service').css('transform', 'translateY(0px)');
-                $('.services-main .service').css('opacity', '1');
-                $('.services-main .service').each((index) => {
+            $('.services-main .service').each((index) => {
+                const viewTop = $(document).scrollTop();
+                const viewBottom = viewTop + $(window).height()
+                const sectionTop = $('.services-main .service').eq(index).offset().top;
+                const sectionBottom = sectionTop + $('.services-main .service').eq(index).height();
+                if (viewTop < sectionTop && viewBottom > sectionTop) {
+                    $('.services-main .service').eq(index).css('transform', 'translateY(0px)');
+                    $('.services-main .service').eq(index).css('opacity', '1');
                     $('.services-main .service').eq(index).css('transition-delay', `${0.1 * index}s`);
-                })
-            }
+                }
+            })
+
         }
-    })
-    $(document).scroll(() => {
         if ($('#cloud-services').length) {
             const viewTop = $(document).scrollTop();
             const viewBottom = viewTop + $(window).height()
-            const sectionTop = $('#cloud-services').offset().top;
-            const sectionBottom = sectionTop + $('#cloud-services').height();
-            if (viewTop < sectionTop && viewBottom > sectionBottom) {
+            const sectionTop = $('#cloud-services .image').offset().top;
+            const sectionBottom = sectionTop + $('#cloud-services .image').height();
+            if (viewTop < sectionTop && viewBottom > sectionTop) {
                 $('#cloud-services .image').css('transform', 'translateX(0px)');
                 $('#cloud-services .image').css('opacity', '1');
             }
         }
-    })
-    $(document).scroll(() => {
         if ($('#development-services').length) {
             const viewTop = $(document).scrollTop();
             const viewBottom = viewTop + $(window).height()
-            const sectionTop = $('#development-services').offset().top;
-            const sectionBottom = sectionTop + $('#development-services').height();
-            if (viewTop < sectionTop && viewBottom > sectionBottom) {
+            const sectionTop = $('#development-services .image').offset().top;
+            const sectionBottom = sectionTop + $('#development-services .image').height();
+            if (viewTop < sectionTop && viewBottom > sectionTop) {
                 $('#development-services .image').css('transform', 'translateX(0px)');
                 $('#development-services .image').css('opacity', '1');
             }
         }
-    })
-    $(document).scroll(() => {
         if ($('#pricing').length) {
-            const viewTop = $(document).scrollTop();
-            const viewBottom = viewTop + $(window).height()
-            const sectionTop = $('#pricing .head').offset().top;
-            const sectionBottom = sectionTop + $('#pricing .head').height();
-            if (viewTop < sectionTop && viewBottom > sectionBottom) {
-                $('.plan').css('transform', 'translateY(0px)');
-                $('.plan').css('opacity', '1');
-                $('.plan').each((index) => {
-                    $('.plan').eq(index).css('transition-delay', `${0.1 * index}s`);
-                })
+            $('#pricing .plan').each((index) => {
+                const viewTop = $(document).scrollTop();
+                const viewBottom = viewTop + $(window).height()
+                const sectionTop = $('#pricing .plan').eq(index).offset().top;
+                const sectionBottom = sectionTop + $('#pricing .plan').eq(index).height();
+                if (viewTop < sectionTop && viewBottom > sectionTop) {
+                    $('#pricing .plan').eq(index).css('transform', 'translateY(0px)');
+                    $('#pricing .plan').eq(index).css('opacity', '1');
+                    $('#pricing .plan').eq(index).css('transition-delay', `${0.1 * index}s`);
+                }
+            })
 
-            }
         }
-    })
-    //#endregion
+    }
+    $(document).scroll(() => {
+        scrollDown();
 
-    //#region loader
+    })
     $(window).on('load', () => {
-        $('.loader').fadeOut('slow')
+        scrollDown();
     })
     //#endregion
-
 });

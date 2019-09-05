@@ -58,7 +58,7 @@ header{
                 transform-origin: 10% 90%;
               }
         }
-        .nav-coll{
+        .navbar-collapse{
             a{
                 padding-top: 0px !important;
                 padding-bottom: 0px !important;
@@ -68,12 +68,12 @@ header{
                 margin-left: 60px;
                 li{
                     margin: 0 10px;
-                    a{
-                        color: $color-light !important;
+                    .nav-link{
+                        color: $color-light;
                         font-size: $font-size * 0.875;
                         font-weight: $font-weight;
                         &:hover{
-                            color: $color-light !important;
+                            color: $color-light;
                         }
                     }
                    
@@ -107,6 +107,7 @@ header{
                         opacity: 0;
                         transform: translateY(-2em);
                         a{
+                            font-weight: $font-weight;
                             padding-left: 20px;
                             line-height: $line-height * 2.5;
                             font-size: $font-size * 0.8125;
@@ -179,6 +180,14 @@ header{
     height: 80px;
     nav{
         margin-top: 23px !important;
+        .nav-item{
+        .nav-link{
+            color: $color-light-black !important;
+        }
+        &:hover .nav-link{
+            color: $main-color !important;
+        }
+    }
     }
    }
 /* colored header */
@@ -187,5 +196,13 @@ header{
     height: 80px !important;
     nav{
         margin-top: 23px !important;
+        .nav-item{
+            .nav-link{
+                color: $color-light-black !important;
+            }
+            &:hover .nav-link{
+                color: $main-color !important;
+            }
+        }
     }
 }

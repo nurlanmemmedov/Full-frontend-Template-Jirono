@@ -22,9 +22,11 @@ a{
     height: 100vh;
     background-position: center;
     background-size: cover;
+    width: 100%;
 }
 /* common container properties */
 .container{
+    width: 100%;
     padding: 0;
    display: flex;
    align-items: center;
@@ -72,39 +74,43 @@ a{
         height: 80px !important;
         nav{
             margin-top: 23px !important;
-        .collapse.showing{
-            height: 204px;
-            transition: all .4s;
+        .navbar-collapse.showing{
+            max-height: 400px;
+            transition: max-height .6s;
         }
-        .nav-coll.collapsing{
+        .navbar-collapse.collapsing{
             display: none !important;
         }
-        .nav-coll{
+        .navbar-collapse{
             background-color: $color-white !important;
             display: block !important;
-            height: 0px;
+            max-height: 0px;
             overflow: hidden;
-            transition: all .4s;
+            transition: max-height .3s;
             margin-top: 19px;
             ul{
                 margin-left: 0 !important;
-                li{
+                .nav-item{
                     margin: 0 !important;
                     transition: $main-transition;
                     border-bottom: 1px solid $color-light-gray;
-                   a{
+                   .nav-link{
                    height: 50px !important;
                    color: $color-light-black !important; 
                    padding-left: 30px !important;
                    line-height: $line-height * 3.125 !important;
                    background-color: $color-white;
+                   &:hover{
+                    color: $color-light-black !important; 
+                    background-color: $color-light-gray !important;
+                 }
                    i{
                     left: 96% !important;
                 }
                 }
-                &:hover{
-                    background-color: $color-light-gray;
-                }
+                    &:hover .nav-link{
+                        color: $color-light-black !important;
+                    }
                 }
                 .dropdown{
                 .dropdown-menu{
@@ -113,12 +119,12 @@ a{
                     transform: translateY(0) !important;
                     display: none !important;
                     box-shadow: none !important;
+                    margin: 0 !important;
+                    width: 100% !important;
                 }
                 .dropdown-menu.show{
                     display:  block !important;
-                    margin: 0 !important;
-                    width: 100%;
-                    a{
+                    .dropdown-item{
                         width: 100%;
                         font-size: $font-size * 0.875;
                         border-bottom: 1px solid $color-light-gray;

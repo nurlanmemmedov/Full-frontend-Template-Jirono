@@ -24,10 +24,12 @@ a {
   height: 100vh;
   background-position: center;
   background-size: cover;
+  width: 100%;
 }
 
 /* common container properties */
 .container {
+  width: 100%;
   padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -93,46 +95,50 @@ a {
   header nav {
     margin-top: 23px !important;
   }
-  header nav .collapse.showing {
-    height: 204px;
-    -webkit-transition: all .4s;
-    transition: all .4s;
+  header nav .navbar-collapse.showing {
+    max-height: 400px;
+    -webkit-transition: max-height .6s;
+    transition: max-height .6s;
   }
-  header nav .nav-coll.collapsing {
+  header nav .navbar-collapse.collapsing {
     display: none !important;
   }
-  header nav .nav-coll {
+  header nav .navbar-collapse {
     background-color: #FFF !important;
     display: block !important;
-    height: 0px;
+    max-height: 0px;
     overflow: hidden;
-    -webkit-transition: all .4s;
-    transition: all .4s;
+    -webkit-transition: max-height .3s;
+    transition: max-height .3s;
     margin-top: 19px;
   }
-  header nav .nav-coll ul {
+  header nav .navbar-collapse ul {
     margin-left: 0 !important;
   }
-  header nav .nav-coll ul li {
+  header nav .navbar-collapse ul .nav-item {
     margin: 0 !important;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
     border-bottom: 1px solid #f5f5f5;
   }
-  header nav .nav-coll ul li a {
+  header nav .navbar-collapse ul .nav-item .nav-link {
     height: 50px !important;
     color: #3B566E !important;
     padding-left: 30px !important;
     line-height: 3.125rem !important;
     background-color: #FFF;
   }
-  header nav .nav-coll ul li a i {
+  header nav .navbar-collapse ul .nav-item .nav-link:hover {
+    color: #3B566E !important;
+    background-color: #f5f5f5 !important;
+  }
+  header nav .navbar-collapse ul .nav-item .nav-link i {
     left: 96% !important;
   }
-  header nav .nav-coll ul li:hover {
-    background-color: #f5f5f5;
+  header nav .navbar-collapse ul .nav-item:hover .nav-link {
+    color: #3B566E !important;
   }
-  header nav .nav-coll ul .dropdown .dropdown-menu {
+  header nav .navbar-collapse ul .dropdown .dropdown-menu {
     opacity: 1 !important;
     visibility: visible !important;
     -webkit-transform: translateY(0) !important;
@@ -140,13 +146,13 @@ a {
     display: none !important;
     -webkit-box-shadow: none !important;
             box-shadow: none !important;
-  }
-  header nav .nav-coll ul .dropdown .dropdown-menu.show {
-    display: block !important;
     margin: 0 !important;
-    width: 100%;
+    width: 100% !important;
   }
-  header nav .nav-coll ul .dropdown .dropdown-menu.show a {
+  header nav .navbar-collapse ul .dropdown .dropdown-menu.show {
+    display: block !important;
+  }
+  header nav .navbar-collapse ul .dropdown .dropdown-menu.show .dropdown-item {
     width: 100%;
     font-size: 0.875rem;
     border-bottom: 1px solid #f5f5f5;
@@ -154,14 +160,14 @@ a {
     height: 50px !important;
     line-height: 3.125rem !important;
   }
-  header nav .nav-coll ul .dropdown .dropdown-menu.show a:hover {
+  header nav .navbar-collapse ul .dropdown .dropdown-menu.show .dropdown-item:hover {
     background-color: #f5f5f5;
     padding-left: 50px !important;
   }
-  header nav .nav-coll ul .dropdown .dropdown-menu.show a:hover::before {
+  header nav .navbar-collapse ul .dropdown .dropdown-menu.show .dropdown-item:hover::before {
     width: 0;
   }
-  header nav .nav-coll form {
+  header nav .navbar-collapse form {
     display: none;
   }
   .responsive-center {
@@ -351,44 +357,44 @@ header .container nav .navbar-toggler.coll .bottom-bar {
           transform-origin: 10% 90%;
 }
 
-header .container nav .nav-coll {
+header .container nav .navbar-collapse {
   /* menu starts */
   /* menu ends */
 }
 
-header .container nav .nav-coll a {
+header .container nav .navbar-collapse a {
   padding-top: 0px !important;
   padding-bottom: 0px !important;
 }
 
-header .container nav .nav-coll ul {
+header .container nav .navbar-collapse ul {
   margin-left: 60px;
 }
 
-header .container nav .nav-coll ul li {
+header .container nav .navbar-collapse ul li {
   margin: 0 10px;
 }
 
-header .container nav .nav-coll ul li a {
-  color: #6F8BA4 !important;
+header .container nav .navbar-collapse ul li .nav-link {
+  color: #6F8BA4;
   font-size: 0.875rem;
   font-weight: 600;
 }
 
-header .container nav .nav-coll ul li a:hover {
-  color: #6F8BA4 !important;
+header .container nav .navbar-collapse ul li .nav-link:hover {
+  color: #6F8BA4;
 }
 
-header .container nav .nav-coll ul .dropdown .dropdown-toggle {
+header .container nav .navbar-collapse ul .dropdown .dropdown-toggle {
   padding-right: 23px !important;
   position: relative;
 }
 
-header .container nav .nav-coll ul .dropdown .dropdown-toggle::after {
+header .container nav .navbar-collapse ul .dropdown .dropdown-toggle::after {
   display: none;
 }
 
-header .container nav .nav-coll ul .dropdown .dropdown-toggle i {
+header .container nav .navbar-collapse ul .dropdown .dropdown-toggle i {
   position: absolute;
   content: "";
   top: 41%;
@@ -396,7 +402,7 @@ header .container nav .nav-coll ul .dropdown .dropdown-toggle i {
   font-size: 8px;
 }
 
-header .container nav .nav-coll ul .dropdown .dropdown-menu {
+header .container nav .navbar-collapse ul .dropdown .dropdown-menu {
   margin-left: 15px;
   width: 200px;
   padding: 0;
@@ -414,7 +420,8 @@ header .container nav .nav-coll ul .dropdown .dropdown-menu {
           transform: translateY(-2em);
 }
 
-header .container nav .nav-coll ul .dropdown .dropdown-menu a {
+header .container nav .navbar-collapse ul .dropdown .dropdown-menu a {
+  font-weight: 600;
   padding-left: 20px;
   line-height: 2.5rem;
   font-size: 0.8125rem;
@@ -425,7 +432,7 @@ header .container nav .nav-coll ul .dropdown .dropdown-menu a {
   position: relative;
 }
 
-header .container nav .nav-coll ul .dropdown .dropdown-menu a::before {
+header .container nav .navbar-collapse ul .dropdown .dropdown-menu a::before {
   position: absolute;
   content: "";
   top: 0;
@@ -437,23 +444,23 @@ header .container nav .nav-coll ul .dropdown .dropdown-menu a::before {
   transition: all 0.3s ease;
 }
 
-header .container nav .nav-coll ul .dropdown .dropdown-menu a:hover::before {
+header .container nav .navbar-collapse ul .dropdown .dropdown-menu a:hover::before {
   width: 3px;
 }
 
-header .container nav .nav-coll ul .dropdown .dropdown-menu a:hover {
+header .container nav .navbar-collapse ul .dropdown .dropdown-menu a:hover {
   background-color: #f5f5f5;
   padding-left: 25px !important;
 }
 
-header .container nav .nav-coll ul .dropdown:hover .dropdown-menu {
+header .container nav .navbar-collapse ul .dropdown:hover .dropdown-menu {
   visibility: visible;
   opacity: 1;
   -webkit-transform: translateY(0);
           transform: translateY(0);
 }
 
-header .container nav .nav-coll form button {
+header .container nav .navbar-collapse form button {
   line-height: 2rem;
   padding: 0 25px;
   margin-left: 15px;
@@ -462,17 +469,17 @@ header .container nav .nav-coll form button {
   height: 32px;
 }
 
-header .container nav .nav-coll form .sign-in {
+header .container nav .navbar-collapse form .sign-in {
   background-color: transparent;
   color: #585CE9;
 }
 
-header .container nav .nav-coll form .sign-in:hover {
+header .container nav .navbar-collapse form .sign-in:hover {
   color: #FFF;
   background-color: #585CE9;
 }
 
-header .container nav .nav-coll form .sign-up:hover {
+header .container nav .navbar-collapse form .sign-up:hover {
   color: #585CE9;
   background-color: transparent;
 }
@@ -490,6 +497,14 @@ header .container nav .nav-coll form .sign-up:hover {
   margin-top: 23px !important;
 }
 
+.white nav .nav-item .nav-link {
+  color: #3B566E !important;
+}
+
+.white nav .nav-item:hover .nav-link {
+  color: #585CE9 !important;
+}
+
 /* colored header */
 .colorfull {
   background-color: #FFF;
@@ -498,6 +513,14 @@ header .container nav .nav-coll form .sign-up:hover {
 
 .colorfull nav {
   margin-top: 23px !important;
+}
+
+.colorfull nav .nav-item .nav-link {
+  color: #3B566E !important;
+}
+
+.colorfull nav .nav-item:hover .nav-link {
+  color: #585CE9 !important;
 }
 
 /* welcome area properties start */
@@ -1255,7 +1278,7 @@ header .container nav .nav-coll form .sign-up:hover {
 /* faqs section ends */
 /* blog-section start */
 #blogs {
-  font-weight: 300 !important;
+  font-weight: 400 !important;
   background-color: #F7FAFD;
 }
 
@@ -1263,6 +1286,7 @@ header .container nav .nav-coll form .sign-up:hover {
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
+  width: 100% !important;
   /* blogs start */
   /* blogs end */
   /* blogs additions start */
@@ -1270,6 +1294,7 @@ header .container nav .nav-coll form .sign-up:hover {
 }
 
 #blogs .container .blog-area {
+  padding: 0 !important;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1299,10 +1324,12 @@ header .container nav .nav-coll form .sign-up:hover {
 }
 
 #blogs .container .blog-area .blog .blog-item .blog-image img {
-  width: 100%;
-  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  display: block;
+  height: 100%;
+  width: auto;
+  min-width: 100%;
 }
 
 #blogs .container .blog-area .blog .blog-item .blog-image .date {
@@ -1438,6 +1465,10 @@ header .container nav .nav-coll form .sign-up:hover {
 #blogs .container .blog-area .nav .arrow-right {
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
+}
+
+#blogs .container .additions {
+  padding: 0 !important;
 }
 
 #blogs .container .additions .search {
@@ -1637,7 +1668,7 @@ header .container nav .nav-coll form .sign-up:hover {
   /* comment posting area end */
 }
 
-.blog-single .blog .details .single .small-images .image a {
+.blog-single .blog .details .single .small-images .image .image-popup {
   border-radius: 5px;
   overflow: hidden;
   display: block;
@@ -1645,7 +1676,7 @@ header .container nav .nav-coll form .sign-up:hover {
   margin-bottom: 30px;
 }
 
-.blog-single .blog .details .single .small-images .image a img {
+.blog-single .blog .details .single .small-images .image .image-popup img {
   width: 100%;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
@@ -1654,7 +1685,7 @@ header .container nav .nav-coll form .sign-up:hover {
      object-fit: cover;
 }
 
-.blog-single .blog .details .single .small-images .image a:hover img {
+.blog-single .blog .details .single .small-images .image .image-popup:hover img {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
@@ -1899,11 +1930,164 @@ header .container nav .nav-coll form .sign-up:hover {
 }
 
 /* blog-single page ends */
+/* carousel starts */
+.owl-carousel.owl-loaded {
+  display: none;
+  background: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  z-index: 100000;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  cursor: -webkit-zoom-out;
+  cursor: zoom-out;
+}
+
+.owl-carousel.owl-loaded .fadeOut {
+  -webkit-animation-duration: 0s !important;
+          animation-duration: 0s !important;
+}
+
+.owl-carousel.owl-loaded .owl-stage-outer {
+  height: 100%;
+}
+
+.owl-carousel.owl-loaded .owl-stage-outer .owl-stage {
+  height: 100%;
+}
+
+.owl-carousel.owl-loaded .owl-stage-outer .owl-stage .owl-item {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100vw;
+  visibility: hidden;
+}
+
+.owl-carousel.owl-loaded .owl-stage-outer .owl-stage .owl-item div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  background-size: cover;
+  background-position: bottom;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: auto;
+}
+
+.owl-carousel.owl-loaded .owl-stage-outer .owl-stage .owl-item div img {
+  padding: 40px 0;
+  cursor: pointer;
+  max-height: 657px;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+}
+
+.owl-carousel.owl-loaded .owl-stage-outer .owl-stage .owl-item div .close-button {
+  position: absolute;
+  right: 0;
+  top: 6px;
+  font-size: 26px;
+  font-weight: 700;
+  color: #CCC;
+  text-align: end;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.owl-carousel.owl-loaded .owl-stage-outer .owl-stage .owl-item div .close-button:hover {
+  color: #F3F3F3;
+}
+
+.owl-carousel.owl-loaded .owl-stage-outer .owl-stage .owl-item div .info {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+.owl-carousel.owl-loaded .owl-stage-outer .owl-stage .owl-item div .info h5 {
+  color: #F3F3F3;
+  font-size: 1rem;
+}
+
+.owl-carousel.owl-loaded .owl-stage-outer .owl-stage .owl-item div .info span {
+  color: #CCC;
+  font-size: 0.75rem;
+}
+
+.owl-carousel.owl-loaded .owl-stage-outer .owl-stage .owl-item.active {
+  visibility: visible;
+}
+
+.owl-carousel.owl-loaded .owl-nav button {
+  outline: none;
+  position: absolute;
+  top: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.owl-carousel.owl-loaded .owl-nav button i {
+  font-size: 45px;
+  padding: 25px;
+  color: #CCC;
+}
+
+.owl-carousel.owl-loaded .owl-nav button:hover i {
+  color: #FFF;
+}
+
+.owl-carousel.owl-loaded .owl-nav button:focus i {
+  color: #FFF;
+}
+
+.owl-carousel.owl-loaded .owl-nav .owl-next {
+  right: 0;
+}
+
+/* carousel ends */
+/* when carousel on screen body's overflow hidden */
+.overflow {
+  overflow: hidden !important;
+}
+
 /* contact area section starts*/
 #contact-area {
-  font-weight: 300;
   background-color: #F7FAFD;
   padding-bottom: 60px;
+  font-weight: 400;
 }
 
 #contact-area .map-wrap {
@@ -1984,8 +2168,8 @@ header .container nav .nav-coll form .sign-up:hover {
   padding-top: 60px;
   border-top: 1px solid #f5f5f5;
   color: #6F8BA4;
-  font-weight: 300;
   background-color: #F7FAFD;
+  font-weight: 400;
 }
 
 #contact-us .container {
@@ -2222,6 +2406,7 @@ header .container nav .nav-coll form .sign-up:hover {
 /* main cloud sections' properties end */
 /* main parallax properties start */
 .parallax-main {
+  width: 100%;
   position: relative;
   min-height: 315px;
   display: -webkit-box;
@@ -2410,7 +2595,7 @@ header .container nav .nav-coll form .sign-up:hover {
   top: 0;
   bottom: 0;
   position: fixed;
-  z-index: 999999;
+  z-index: 99999;
 }
 
 .loader .loader-spin {
