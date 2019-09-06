@@ -1,0 +1,66 @@
+/* features section starts */
+#features{
+    background-color: $color-lightest-gray;
+    .container{
+        /* features-item starts */
+        .features-item{
+            .features-item-wrap{
+                display: flex;
+                align-items: center;
+                background-color: $color-white;
+                box-shadow: $shadow-light;
+                border-radius: $smallest-radius;
+                justify-content: center;
+                margin-bottom: 30px;
+                padding: 30px;
+                .icon{
+                    width: 166px;
+                    height: 166px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: relative;
+                    img{
+                        position: relative;
+                        z-index: 2;
+                    }
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        top: 15px;
+                        left: 15px;
+                        width: 133px;
+                        height: 133px;
+                        background-color: #F7FAFD;
+                        transition: $main-transition;
+                    }
+                }
+                .content{
+                    padding-left: 30px;
+                    width: calc(100% - 166px);
+                    h5{
+                        font-weight: 400;
+                        font-size: $font-size * 1.125;
+                        line-height: $line-height * 1.75;
+                        color: $color-light-black;
+                        margin-bottom: 15px;
+                        letter-spacing: 0.80 * $letter-spacing;
+                    }
+                    p{
+                        margin-bottom: 0px !important;
+                        font-weight: 400;
+                        font-size: $font-size * 0.875;
+                        color: $color-light;
+                        line-height: 1.625 * $line-height;
+                        letter-spacing: 0.88 * $letter-spacing;
+                    }
+                }
+                &:hover .icon::before{
+                    transform: rotate(45deg);
+                }
+            }
+        }
+        /* features-item ends */
+    }
+}
+/* features section ends */

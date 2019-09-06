@@ -110,10 +110,11 @@ a {
     overflow: hidden;
     -webkit-transition: max-height .3s;
     transition: max-height .3s;
-    margin-top: 19px;
+    margin-top: 18px;
   }
   header nav .navbar-collapse ul {
     margin-left: 0 !important;
+    border-top: 1px solid #f5f5f5;
   }
   header nav .navbar-collapse ul .nav-item {
     margin: 0 !important;
@@ -411,13 +412,13 @@ header .container nav .navbar-collapse ul .dropdown .dropdown-menu {
   border-radius: 5px;
   -webkit-box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.06);
           box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.06);
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s;
+  transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s;
   display: block;
   visibility: hidden;
   opacity: 0;
-  -webkit-transform: translateY(-2em);
-          transform: translateY(-2em);
+  -webkit-transform: translateY(-1.5em);
+          transform: translateY(-1.5em);
 }
 
 header .container nav .navbar-collapse ul .dropdown .dropdown-menu a {
@@ -458,6 +459,8 @@ header .container nav .navbar-collapse ul .dropdown:hover .dropdown-menu {
   opacity: 1;
   -webkit-transform: translateY(0);
           transform: translateY(0);
+  -webkit-transition-delay: 0s, 0s, 0.3s;
+          transition-delay: 0s, 0s, 0.3s;
 }
 
 header .container nav .navbar-collapse form button {
@@ -675,52 +678,6 @@ header .container nav .navbar-collapse form .sign-up:hover {
 }
 
 /* developmennt services section end */
-/* parallax section starts */
-#parallax {
-  padding: 60px 0;
-}
-
-#parallax .container .count {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  padding: 20px 0;
-}
-
-#parallax .container .count .details {
-  position: relative;
-  z-index: 4;
-  color: #FFF;
-  text-align: center;
-}
-
-#parallax .container .count .details h1 {
-  font-size: 2.5rem;
-  font-weight: 400;
-}
-
-#parallax .container .count .details p {
-  font-size: 1.25rem;
-  font-weight: 400;
-  letter-spacing: 0.86px;
-}
-
-#parallax .container .count:hover {
-  -webkit-transform: translateY(-7px);
-          transform: translateY(-7px);
-}
-
-/* parallax section ends */
 /* our team section starts */
 #our-team {
   background-color: #FFF;
@@ -2224,6 +2181,95 @@ header .container nav .navbar-collapse form .sign-up:hover {
 }
 
 /* contact us section ends*/
+/* features section starts */
+#features {
+  background-color: #F7FAFD;
+}
+
+#features .container {
+  /* features-item starts */
+  /* features-item ends */
+}
+
+#features .container .features-item .features-item-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #FFF;
+  -webkit-box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
+          box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
+  border-radius: 3px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 30px;
+  padding: 30px;
+}
+
+#features .container .features-item .features-item-wrap .icon {
+  width: 166px;
+  height: 166px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+#features .container .features-item .features-item-wrap .icon img {
+  position: relative;
+  z-index: 2;
+}
+
+#features .container .features-item .features-item-wrap .icon::before {
+  content: '';
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 133px;
+  height: 133px;
+  background-color: #F7FAFD;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+#features .container .features-item .features-item-wrap .content {
+  padding-left: 30px;
+  width: calc(100% - 166px);
+}
+
+#features .container .features-item .features-item-wrap .content h5 {
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  color: #3B566E;
+  margin-bottom: 15px;
+  letter-spacing: 0.8px;
+}
+
+#features .container .features-item .features-item-wrap .content p {
+  margin-bottom: 0px !important;
+  font-weight: 400;
+  font-size: 0.875rem;
+  color: #6F8BA4;
+  line-height: 1.625rem;
+  letter-spacing: 0.88px;
+}
+
+#features .container .features-item .features-item-wrap:hover .icon::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+/* features section ends */
 /* main button properties start */
 .main-button {
   background-color: #585CE9;
@@ -2232,7 +2278,6 @@ header .container nav .navbar-collapse form .sign-up:hover {
   color: #FFF;
   line-height: 2.75rem;
   cursor: pointer;
-  outline: none;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   font-size: 0.75rem;
@@ -2245,6 +2290,10 @@ header .container nav .navbar-collapse form .sign-up:hover {
 
 .main-button:hover {
   background-color: #4146e6;
+}
+
+.main-button:focus {
+  outline: none;
 }
 
 /* main button properties end */
@@ -2271,8 +2320,8 @@ header .container nav .navbar-collapse form .sign-up:hover {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   /* service item starts */
-  /* service item starts */
-  /* active service item */
+  /* service item ends */
+  /* active service item starts */
   /* active service item ends */
 }
 
@@ -2311,6 +2360,7 @@ header .container nav .navbar-collapse form .sign-up:hover {
   z-index: 3;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  font-weight: 400;
 }
 
 .cloud-main .container .cloud-services .services .service a:after {
@@ -2489,6 +2539,52 @@ header .container nav .navbar-collapse form .sign-up:hover {
 }
 
 /* page-head parallax ends */
+/* statistics parallax starts */
+#parallax-statistic {
+  padding: 60px 0;
+}
+
+#parallax-statistic .container .count {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  padding: 20px 0;
+}
+
+#parallax-statistic .container .count .details {
+  position: relative;
+  z-index: 4;
+  color: #FFF;
+  text-align: center;
+}
+
+#parallax-statistic .container .count .details h1 {
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+#parallax-statistic .container .count .details p {
+  font-size: 1.25rem;
+  font-weight: 400;
+  letter-spacing: 0.86px;
+}
+
+#parallax-statistic .container .count:hover {
+  -webkit-transform: translateY(-7px);
+          transform: translateY(-7px);
+}
+
+/* statistics parallax ends */
 /* main services section properties start */
 .services-main {
   background-color: #FFF;

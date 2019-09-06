@@ -1,5 +1,8 @@
 $(document).ready(function () {
+    //#region loader
     $('.loader').fadeOut('slow')
+    //#endregion
+    
     //#region carousel
     //owl-carousel options
     if ($('.owl-carousel').length) {
@@ -124,12 +127,11 @@ $(document).ready(function () {
     let isScrolled = false;
     //count up if section seems on window
     function view() {
-        if ($('#parallax').length) {
-            $('#parallax .count').each((index) => {
+        if ($('#parallax-statistic').length) {
+            $('#parallax-statistic .count').each((index) => {
                 const viewTop = $(document).scrollTop();
                 const viewBottom = viewTop + $(window).height()
-                const sectionTop = $('#parallax .count').eq(index).offset().top;
-                const sectionBottom = sectionTop + $('#parallax .count').eq(index).height();
+                const sectionTop = $('#parallax-statistic .count').eq(index).offset().top;
                 if (viewTop < sectionTop && viewBottom > sectionTop) {
                     if (!isScrolled) {
                         counter();
@@ -149,14 +151,20 @@ $(document).ready(function () {
     })
     //#endregion
 
-    //#region about page parallaxes
+    //#region changed-parallaxes
     //changing of parallaxes backgrounds on about page 
-    $(document).on('scroll', () => {
-        if ($(document).scrollTop() > $('#parallax-about').height()) {
+    function changeParallax() {
+        if ($(document).scrollTop() > $('.changed-parallax').height()) {
             $('.parallax-2nd').css('z-index', '-1')
         } else {
             $('.parallax-2nd').css('z-index', '-3')
         }
+    }
+    $(document).on('scroll', () => {
+        changeParallax();
+    })
+    $(window).on('load',()=>{
+        changeParallax();
     })
     //#endregion
 
@@ -180,7 +188,6 @@ $(document).ready(function () {
                 const viewTop = $(document).scrollTop();
                 const viewBottom = viewTop + $(window).height()
                 const sectionTop = $('.services-main .service').eq(index).offset().top;
-                const sectionBottom = sectionTop + $('.services-main .service').eq(index).height();
                 if (viewTop < sectionTop && viewBottom > sectionTop) {
                     $('.services-main .service').eq(index).css('transform', 'translateY(0px)');
                     $('.services-main .service').eq(index).css('opacity', '1');
@@ -193,7 +200,6 @@ $(document).ready(function () {
             const viewTop = $(document).scrollTop();
             const viewBottom = viewTop + $(window).height()
             const sectionTop = $('#cloud-services .image').offset().top;
-            const sectionBottom = sectionTop + $('#cloud-services .image').height();
             if (viewTop < sectionTop && viewBottom > sectionTop) {
                 $('#cloud-services .image').css('transform', 'translateX(0px)');
                 $('#cloud-services .image').css('opacity', '1');
@@ -203,7 +209,6 @@ $(document).ready(function () {
             const viewTop = $(document).scrollTop();
             const viewBottom = viewTop + $(window).height()
             const sectionTop = $('#development-services .image').offset().top;
-            const sectionBottom = sectionTop + $('#development-services .image').height();
             if (viewTop < sectionTop && viewBottom > sectionTop) {
                 $('#development-services .image').css('transform', 'translateX(0px)');
                 $('#development-services .image').css('opacity', '1');
@@ -214,7 +219,6 @@ $(document).ready(function () {
                 const viewTop = $(document).scrollTop();
                 const viewBottom = viewTop + $(window).height()
                 const sectionTop = $('#pricing .plan').eq(index).offset().top;
-                const sectionBottom = sectionTop + $('#pricing .plan').eq(index).height();
                 if (viewTop < sectionTop && viewBottom > sectionTop) {
                     $('#pricing .plan').eq(index).css('transform', 'translateY(0px)');
                     $('#pricing .plan').eq(index).css('opacity', '1');

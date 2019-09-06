@@ -15,11 +15,6 @@ header{
         margin-top: 33px;
         z-index: 9999;
         width: 100%;
-        .navbar-brand{
-            img{
-
-            }
-        }
         .navbar-toggler{
             border: none;
             background: transparent !important;
@@ -76,7 +71,6 @@ header{
                             color: $color-light;
                         }
                     }
-                   
                 }
                 .dropdown{
                     .dropdown-toggle{
@@ -101,11 +95,11 @@ header{
                         border: none;
                         border-radius: $main-radius;
                         box-shadow: $main-shadow;
-                        transition: $main-transition;
+                        transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s;
                         display: block;
                         visibility: hidden;
                         opacity: 0;
-                        transform: translateY(-2em);
+                        transform: translateY(-1.5em);
                         a{
                             font-weight: $font-weight;
                             padding-left: 20px;
@@ -139,6 +133,7 @@ header{
                         visibility: visible;
                         opacity: 1;
                         transform: translateY(0);
+                        transition-delay: 0s, 0s, 0.3s;
                         
                     }
                 }

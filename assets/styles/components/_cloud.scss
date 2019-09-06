@@ -37,7 +37,7 @@
                             position: relative;
                             z-index: 3;
                             transition: $main-transition;
-
+                            font-weight: 400;
                         }
                         &:after{
                             position: absolute;
@@ -50,7 +50,6 @@
                             z-index: 1;
                             transform: rotate(60deg);
                             transition: $main-transition;
-
                         }
                         &:hover::after{
                             height: 150px;
@@ -63,8 +62,8 @@
                         }
                     }
                 }
-                /* service item starts */
-                /* active service item */
+                /* service item ends */
+                /* active service item starts */
                 .service.active{
                     a{
                         box-shadow: $shadow-light;

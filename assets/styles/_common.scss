@@ -87,9 +87,10 @@ a{
             max-height: 0px;
             overflow: hidden;
             transition: max-height .3s;
-            margin-top: 19px;
+            margin-top: 18px;
             ul{
                 margin-left: 0 !important;
+                border-top: 1px solid #f5f5f5;
                 .nav-item{
                     margin: 0 !important;
                     transition: $main-transition;

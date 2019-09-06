@@ -1,4 +1,4 @@
-//colors
+//#region colors
 $main-color: #585CE9;
 $main-color-dark: #4146e6;
 $hover-blue-color: #0056b3;
@@ -16,23 +16,38 @@ $color-light-border: #ECF7FF;
 $color-light-background: #f5f5f5;
 $color-owl-light: #F3F3F3;
 $color-owl: #CCC;
+//#endregion
 
-//sizes
+//#region sizes
+//border-radius start
 $main-radius: 5px;
 $small-radius: 4px;
+$smallest-radius: 3px;
+//border-radius end
 $line-height: 1rem;
 $font-size: 1rem;
 $font-weight: 600;
 $letter-spacing: 1px;
 $section-p-top: 100px;
 $section-p-bottom: 70px;
-//fonts
+//#endregion
+
+//#region fonts
 $main-font: 'Nunito Sans', sans-serif;
-//shows
+//#endregion
+
+//#region shows
+//box-shadows start
 $main-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.06);
 $shadow-light: 0 2px 48px 0 rgba(0, 0, 0, 0.08);;
+//box-shadows end
+//transitions start
 $main-transition: all .3s ease;
 $transition-later: all .4s;
 $transition-scroll-effect: all .6s ease-in;
-//properties
+//transitions start
+//#endregion
+
+//#region properties
 $low-opacity: 0.8;
+//#endregion

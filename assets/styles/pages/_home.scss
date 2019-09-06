@@ -116,39 +116,6 @@
     background-color: $color-white !important;
 }
 /* developmennt services section end */
-/* parallax section starts */
-#parallax{
-    padding: 60px 0;
-    .container{
-        .count{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-wrap: wrap;
-            transition: $main-transition;
-            padding: 20px 0;
-            .details{
-                position: relative;
-                z-index: 4;
-                color: $color-white;
-                text-align: center;
-                h1{
-                    font-size: $font-size* 2.5;
-                    font-weight: 400;
-                }
-                p{
-                    font-size: $font-size * 1.25;
-                    font-weight: 400;
-                    letter-spacing:  $letter-spacing * 0.86;
-                }
-            }
-            &:hover{
-                transform: translateY(-7px);
-            }
-        }
-}
-}
-/* parallax section ends */
 /* our team section starts */
 #our-team{
     background-color: $color-white;
