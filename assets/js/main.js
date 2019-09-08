@@ -228,10 +228,12 @@ $(document).ready(function () {
 
         }
     }
+
+    //call function when scroll
     $(document).scroll(() => {
         scrollDown();
-
     })
+    //call function when page load
     $(window).on('load', () => {
         scrollDown();
     })

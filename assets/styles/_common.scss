@@ -1,4 +1,4 @@
-/* body properties */
+/* body properties*/
 body{
     font-family: $main-font;
     font-size: $font-size;
@@ -54,6 +54,7 @@ a{
     font-weight: 400;
 }
 /* sections head title ends */
+
 /* common sections' top padding */
 .section-top{
     padding-top: $section-p-top;
@@ -67,6 +68,7 @@ a{
     .mobile-bottom{
         margin-bottom: 30px;
     }
+    /* responsive header properties start */
     header{
         background-color: $color-white !important;
         transition: none !important;
@@ -151,6 +153,8 @@ a{
         }
     }
 }
+    /* responsive header properties end */
+
     .responsive-center{
         text-align: center;
     }
@@ -173,15 +177,17 @@ a{
             font-size: 26px !important;
         }
     }
+    /* responsive contact-area section properties start */
     #contact-area{
         .contact-info{
             margin-top: 30px !important;
             width: 100% !important;
         }
     }
+    /* responsive contact-area section properties end */
   }
   
-  /* common main's margin from header */
+/* common main's margin from header */
   .margin-from-header{
       margin-top: 80px;
   }

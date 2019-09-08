@@ -8,6 +8,7 @@
     width: 100%;
     background-position: top left;
     background-repeat: no-repeat;
+    /* goals section properties start */
     #goals{
         .container{
             justify-content: space-between;
@@ -83,8 +84,18 @@
                            .content{
                                font-weight: $font-weight *2/3;
                                padding: 0 15px;
+                               margin-bottom: 0px !important;
                                p{
                                    font-size: $font-size * 1.125;
+                                    letter-spacing: 1.12 * $letter-spacing;
+                                    line-height: $line-height * 1.75;
+                                    margin-bottom: 0px;
+                                    padding-bottom: 0px;
+                               }
+                               .sub-title{
+                                font-size: $font-size * 0.875;
+                                letter-spacing: 0.88 * $letter-spacing;
+                                margin-bottom: 10px;
                                }
                            }
                         }
@@ -109,6 +120,7 @@
             }
         }
     }
+    /* goals section properties end */
 }
 /* welcome area properties end */
 /* developmennt services section start */

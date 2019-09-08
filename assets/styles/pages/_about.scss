@@ -5,12 +5,12 @@
 /* parallax 2nd image ends*/
 /* services section at about page start */
 #services-about{
-    background-color: $color-light-gray;
+    background-color: $color-lightest-gray;
 }
 /* services section at about page end */
 /* mission sections main properties start */
 .mission-main{
-    background-color: $color-light-gray;
+    background-color: $color-lightest-gray;
     padding-bottom: 100px;
     .container{
         padding: 0 15px !important;
@@ -60,7 +60,6 @@
                 font-size: $font-size * 0.875;
                 line-height: $line-height * 1.625;
                 margin-bottom: 20px;
-
             }
         }
     }
