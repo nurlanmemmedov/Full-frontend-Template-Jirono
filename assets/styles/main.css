@@ -633,6 +633,10 @@ header .container nav .navbar-collapse form .sign-up:hover {
   color: white;
 }
 
+.welcome #goals .container .image-area .row-1 .image-small button:focus {
+  outline: none;
+}
+
 .welcome #goals .container .image-area .row-2 .image-big {
   height: 281px;
   position: relative;
